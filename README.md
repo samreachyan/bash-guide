@@ -334,12 +334,15 @@ $ touch trick.md
 
 ### a. `awk`
 awk is the most useful command for handling text files. It operates on an entire file line by line. By default it uses whitespace to separate the fields. The most common syntax for awk command is
+awk គឺជាពាក្យបញ្ជា command ដែលមានប្រយោជន៍បំផុតសម្រាប់ដោះស្រាយឯកសារអត្ថបទ។ វាដំណើរការលើខ្សែឯកសារទាំងមូលតាមបន្ទាត់។ តាមលំនាំដើមវាប្រើចន្លោះទំនេរដើម្បីបំបែកវាល។ វាជាពាក្យសម្រាប់យបញ្ជា awk
 
 ```bash
 awk '/search_pattern/ { action_to_take_if_pattern_matches; }' file_to_parse
 ```
 
 Lets take following file `/etc/passwd`. Here's the sample data that this file contains:
+អនុញ្ញាតឱ្យអ្នកយកឯកសារ `/etc/passwd`. នេះជាទិន្នន័យគំរូដែលឯកសារនេះមាន៖
+
 ```
 root:x:0:0:root:/root:/usr/bin/zsh
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
