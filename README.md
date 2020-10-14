@@ -23,39 +23,48 @@
 # 1. Basic Operations
 
 ### a. `export`
+ប្រើសម្រាប់បង្ហាញ់អំពីមជ្ឈដ្ឋាន variable ក្នុងការដំឡើងកម្មវិធីអ្វីមួយឬ Configuration ណាមួយ។ ប្រសិនបើអ្នកចង់មើល variable ដែលបានប្រើនោះគ្រាន់តែប្រើ `echo $VARIABLE_NAME` ។
 Displays all environment variables. If you want to get details of a specific variable, use `echo $VARIABLE_NAME`.  
 ```bash
 export
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ export
 AWS_HOME=/Users/adnanadnan/.aws
 LANG=en_US.UTF-8
 LC_CTYPE=en_US.UTF-8
 LESS=-R
-
+```
+```bash
 $ echo $AWS_HOME
 /Users/adnanadnan/.aws
 ```
 
 ### b. `whatis`
 whatis shows description for user commands, system calls, library functions, and others in manual pages
+whatis សម្រាប់បង្ហាញព័ត៌មានបន្ថែមពី commands, ប្រព័ន្ធប្រតិបត្តិការណ៍, បណ្ណាល័យ មុខងារនិង ទំព័រទាក់ទង។
 ```bash
 whatis something
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ whatis bash
 bash (1)             - GNU Bourne-Again SHell
 ```
+```bash
+$ whatis uname
+uname (1)            - print system information
+uname (2)            - get name and information about current kernel
+```
 
 ### c. `whereis`
 whereis searches for executables, source files, and manual pages using a database built by system automatically.
+whereis សម្រាប់អនុវត្តស្វែងរកប្រភពឯកសារ និង ទំព័រ​ទាក់ទងដែលបានប្រើប្រាស់ដំឡើងនៅក្នុងប្រព័ន្ធ។
 ```bash
 whereis name
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ whereis php
 /usr/bin/php
@@ -63,10 +72,11 @@ $ whereis php
 
 ### d. `which`
 which searches for executables in the directories specified by the environment variable PATH. This command will print the full path of the executable(s).
+which សម្រាប់អនុវត្តស្វែងរកទីតាំងតាមមជ្ឈដ្ឋាន variable ស្ថិតនៅ។ វានឹងបង្ហាញគ្រប់ទីតាំងដែលពាក់ព័ន្ធការអនុវត្តខាងលើ។
 ```bash
 which program_name 
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ which php
 /c/xampp/php/php
@@ -74,7 +84,7 @@ $ which php
 
 ### e. clear
 Clears content on window.
-
+វាសម្រាប់សម្អាតអត្ថបទដែលមាននៅលើអេក្រង់បង្ហាញ window ឬ terminal។
 ## 1.1. File Operations
 <table>
    <tr>
@@ -109,6 +119,12 @@ It can be used for the following purposes under UNIX or Linux.
 * Copy text files  
 * Combine text files  
 * Create new text files  
+វាឃើញប្រើច្រើនភាគច្រើននៅក្នុង UNIX ឬ Linux។
+* សម្រាប់បង្ហាញ អក្សរ លើអេក្រង់
+* សម្រាប់ចម្លងអត្ថបទឯកសារ
+* សម្រាប់បញ្ចូលអត្ថបទឯកសារ
+* សម្រាប់បង្កើតអត្ថបទឯកសារថ្មី
+
 ```bash
 cat filename
 cat file1 file2 
@@ -118,45 +134,51 @@ cat < file1 > file2 #copy file1 to file2
 
 ### b. `chmod`
 The chmod command stands for "change mode" and allows you to change the read, write, and execute permissions on your files and folders. For more information on this command check this [link](https://ss64.com/bash/chmod.html).
+chmod ដែលមកពីពាក្យ "change mode" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម៉ូដឯកសារ read write ឬ execute លើឯកសារនិងក្របផ្ទុកឯកសារ។ សម្រាប់ព័ត៌មានលម្អិតលោកអ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://ss64.com/bash/chmod.html) ។ 
 ```bash
 chmod -options filename
 ```
 
 ### c. `chown`
 The chown command stands for "change owner", and allows you to change the owner of a given file or folder, which can be a user and a group. Basic usage is simple forward first comes the user (owner), and then the group, delimited by a colon.
+chown ដែលមកពីពាក្យ "change owner" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម្ចាស់កម្មសិទ្ធិលើឯកសារឬក្របឯកសារណាមួយបាន ដែលត្រូវបានកំណត់ជា user ឬ group។ ការប្រើប្រាស់ភាគច្រើនគឺអនុញ្ញាតពី user មួយទៅ group មួយទៀតដើម្បីមានសិទ្ធិចូលមកប្រើប្រាស់ដែរ។ 
 ```bash
 chown -options user:group filename
 ```
 
 ### d. `cp`
 Copies a file from one location to other.  
+សម្រាប់ចម្លងឯកសារពីកន្លែងមួយទៅកន្លែងណាមួយផ្សេងទៀត។
 ```bash
 cp filename1 filename2
 ```
 Where `filename1` is the source path to the file and `filename2` is the destination path to the file.
-
+`filename1` ត្រូវតែជាទីតាំងរួមឈ្មោះឯកសារ និង `filename2` ជាទីតាំងរួមទាំងឈ្មោះឯកសារដែលលោកអ្នកចង់ចម្លងទៅ។
 ### e. `diff`
-Compares files, and lists their differences.  
+Compares files, and lists their differences. 
+សម្រាប់ប្រៀបធៀបឯកសារ និង បង្ហាញបញ្ជីពីភាពខុសគ្នានៃឯកសារ។ 
 ```bash
 diff filename1 filename2
 ```
 
 ### f. `file`
 Determine file type.  
+សម្រាប់កំណត់ប្រភេទឯកសារ។
 ```bash
 file filename
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ file index.html
  index.html: HTML document, ASCII text
 ```
 ### g. `find`
-Find files in directory
+Find files in directory.
+សម្រាប់ស្វែងរកឯកសារនិងទីតាំងណាមួយ។
 ```bash
 find directory options pattern
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ find . -name README.md
 $ find /home/user1 -name '*.png'
@@ -164,34 +186,39 @@ $ find /home/user1 -name '*.png'
 
 ### h. `gunzip`
 Un-compresses files compressed by gzip.  
+សម្រាប់ពន្លាឯកសារក្នុងបង្រួមឯកសារ gzip ។
 ```bash
 gunzip filename
 ```
 
 ### i. `gzcat`
 Lets you look at gzipped file without actually having to gunzip it.  
+អនុញ្ញាតឱ្យអ្នកមើលឯកសារ gzipped ដោយមិនចាំបាច់មាន gunzip ។
 ```bash
 gzcat filename
 ```
 
 ### j. `gzip`
 Compresses files.  
+សម្រាប់បង្រួមឯកសារ។
 ```bash
 gzip filename
 ```
 
 ### k. `head`
 Outputs the first 10 lines of file  
+សម្រាប់បង្ហាញអត្ថបទ ១០ បន្ទាត់ដំបូងក្នុងឯកសារ។
 ```bash
 head filename
 ```
 
 ### l. `lpq`
 Check out the printer queue.  
+ពិនិត្យមើលលទ្ធផលបង្ហាញជាជួរៗ។
 ```bash
 lpq
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ lpq
 Rank    Owner   Job     File(s)                         Total Size
@@ -201,22 +228,25 @@ active  adnanad 59      demo                            399360 bytes
 
 ### m. `lpr`
 Print the file.  
+សម្រាប់បង្ហាញឯកសារ។
 ```bash
 lpr filename
 ```
 
 ### n. `lprm`
 Remove something from the printer queue.  
+សម្រាប់លុបអ្វីមួយពីលទ្ធផលបង្ហាញជាជួរនោះ។
 ```bash
 lprm jobnumber
 ```
 
 ### o. `ls`
 Lists your files. `ls` has many options: `-l` lists files in 'long format', which contains the exact size of the file, who owns the file, who has the right to look at it, and when it was last modified. `-a` lists all files, including hidden files. For more information on this command check this [link](https://ss64.com/bash/ls.html).  
+សម្រាប់បង្ហាញឯកសារជាបញ្ជី។ `ls` មានជម្រើសជាច្រើន `-l` បង្ហាញព័ត៌មានឯកសារពី ទំហំ ម្ចាស់កម្មសិទ្ធិ និងថ្ងៃកំណែចុងក្រោយ។ `-a` សម្រាប់បង្ហាញបញ្ជីឯកសារ និងបង្ហាញឯកសារដែលមិនត្រូវបានបង្ហាញ។ សម្រាប់ព័ត៌មានលម្អិតលោកអ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://ss64.com/bash/ls.html) ។ 
 ```bash
 ls option
 ```
-Example:
+ឧទាហរណ៍:
 <pre>
 $ ls -la
 rwxr-xr-x   33 adnan  staff    1122 Mar 27 18:44 .
@@ -231,42 +261,51 @@ drwxr-xr-x  17 adnan  staff     578 Mar 27 23:36 .git
 
 ### p. `more`
 Shows the first part of a file (move with space and type q to quit).  
+សម្រាប់បង្ហាញផ្នែកដំបូងនៃឯកសារ (លោកអ្នកអាចរំកិលចុះក្រោមដោយប្រើ space ឬចុច q ដើម្បីបញ្ចប់)។
 ```bash
 more filename
 ```
 
 ### q. `mv`
 Moves a file from one location to other.  
+សម្រាប់ផ្លាស់ប្តូរទីតាំងឯកសារទៅកន្លែងផ្សេងមួយទៀត។
+
 ```bash
 mv filename1 filename2
 ```
 Where `filename1` is the source path to the file and `filename2` is the destination path to the file.
+`filename1` ត្រូវតែជាទីតាំងរួមឈ្មោះឯកសារ និង `filename2` ជាទីតាំងរួមទាំងឈ្មោះឯកសារដែលលោកអ្នកចង់ផ្លាស់ប្តូរទៅ។
 
 Also it can be used for rename a file.
+វាក៏អាចប្រើសម្រាប់កែឈ្មោះឯកសារផងដែរ។
 ```bash
 mv old_name new_name
 ```
 
 ### r. `rm`
 Removes a file. Using this command on a directory gives you an error.
+លុបចេញឯកសារ។ ការប្រើប្រាស់ command នេះនៅលើថតឯកសារផ្តល់ឱ្យអ្នកនូវកំហុស។
 `rm: directory: is a directory`
 To remove a directory you have to pass `-r` which will remove the content of the directory recursively. Optionally you can use `-f` flag to force the deletion i.e. without any confirmations etc.
+ដើម្បីលុបថតឯកសារអ្នកត្រូវប្រើ `-r` ដែលនឹងលុបអត្ថបទវិលជុំ។ ជម្រើសផ្សេងអ្នកអាចប្រើ `-f` សម្រាប់បង្ខំឱ្យលុបដោយគ្មានការបញ្ជាក់ណាមួយ។ 
 ```bash
 rm filename
 ```
 
 ### s. `tail`
 Outputs the last 10 lines of file. Use `-f` to output appended data as the file grows.  
+សម្រាប់បង្ហាញ់លទ្ធផលនៃឯកសារចំនួន ១០ បន្ទាត់ចុងក្រោយ។ `-f` ដើម្បីបង្ហាញទិន្ន័យបន្ថែមនៅពេលឯកសារនោះ។
 ```bash
 tail filename
 ```
 
 ### t. `touch`
 Updates access and modification time stamps of your file. If it doesn't exists, it'll be created.
+ធ្វើបច្ចុប្បន្នភាពការចូលដំណើរការនិងការផ្លាស់ប្តូរពេលវេលានៃឯកសាររបស់អ្នក។ ប្រសិនបើវាមិនមានជាន់ឈ្មោះឯកសារណាមួយទេ វានឹងត្រូវបានបង្កើតឡើង។
 ```bash
 touch filename
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ touch trick.md
 ```
