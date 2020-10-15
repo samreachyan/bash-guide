@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c7862e-54cd-4f05-ad31-0c77a5220946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -55,7 +54,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602689094574</updated>
-      <workItem from="1602689097605" duration="4894000" />
+      <workItem from="1602689097605" duration="4970000" />
+      <workItem from="1602753486188" duration="6024000" />
     </task>
     <servers />
   </component>
@@ -72,5 +72,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602757676611">
+      <screen x="54" y="25" width="1312" height="743" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/54.25.1312.743@54.25.1312.743" timestamp="1602757676611" />
+    <state x="373" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602757959131">
+      <screen x="54" y="25" width="1312" height="743" />
+    </state>
+    <state x="373" y="89" width="672" height="678" key="search.everywhere.popup/54.25.1312.743@54.25.1312.743" timestamp="1602757959131" />
   </component>
 </project>

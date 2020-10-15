@@ -341,7 +341,7 @@ awk '/search_pattern/ { action_to_take_if_pattern_matches; }' file_to_parse
 ```
 
 Lets take following file `/etc/passwd`. Here's the sample data that this file contains:
-អនុញ្ញាតឱ្យអ្នកយកឯកសារ `/etc/passwd`. នេះជាទិន្នន័យគំរូដែលឯកសារនេះមាន៖
+អ្នកអាចយកគំរូឯកសារ `/etc/passwd`. នេះជាទិន្នន័យគំរូដែលឯកសារនេះមាន៖
 
 ```
 root:x:0:0:root:/root:/usr/bin/zsh
@@ -351,10 +351,12 @@ sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
 ```
 So now lets get only username from this file. Where `-F` specifies that on which base we are going to separate the fields. In our case it's `:`. `{ print $1 }` means print out the first matching field.
+ឥឡូវយើងសាកយកតែ username ពីឯកសារមួយនេះ។ `-F` សម្រាប់បំបែកតំបន់។ ក្នុងករណីនេះ `:`. `{ print $1 }` សម្រាប់បង្ហាញការផ្ទៀងផ្ទាត់តំបន់ដំបូង។
 ```bash
 awk -F':' '{ print $1 }' /etc/passwd
 ```
 After running the above command you will get following output.
+បន្ទាប់ពីបានដំណើរការការបញ្ជាខាងលើអ្នកនឹងទទួលបានលទ្ធផលដូចខាងក្រោម។
 ```
 root
 daemon
@@ -363,10 +365,11 @@ sys
 sync
 ```
 For more detail on how to use `awk`, check following [link](https://www.cyberciti.biz/faq/bash-scripting-using-awk).
-
+សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ `awk` អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://www.cyberciti.biz/faq/bash-scripting-using-awk) ។ 
 
 ### b. `cut`
-Remove sections from each line of files
+Remove sections from each line of files.
+ការលុបផ្នែកណាមួយក្នុងឯកសារ។
 
 *example.txt*
 ```bash
@@ -374,6 +377,7 @@ red riding hood went to the park to play
 ```
 
 *show me columns 2 , 7 , and 9 with a space as a separator*
+*ដើម្បីបង្ហាញជួរឈរទី២ ៧ និង ៩ ដែលមានដកឃ្លាទុក*
 ```bash
 cut -d " " -f2,7,9 example.txt
 ```
@@ -383,8 +387,9 @@ riding park play
 
 ### c. `echo`
 Display a line of text
+បង្ហាញអត្ថបទមួយបន្ទាត់
 
-*display "Hello World"*
+*បង្ហាញ "Hello World"*
 ```bash
 echo Hello World
 ```
@@ -393,6 +398,7 @@ Hello World
 ```
 
 *display "Hello World" with newlines between words*
+*បង្ហាញ "Hello World" ចុះបន្ទាត់ថ្មីក្នុងមួយពាក្យ*
 ```bash
 echo -ne "Hello\nWorld\n"
 ```
@@ -403,6 +409,7 @@ World
 
 ### d. `egrep`
 Print lines matching a pattern - Extended Expression (alias for: 'grep -E')
+បង្ហាញអត្ថបទបន្ទាត់ដែលតាមលំនាំ - ការមតិបន្ថែម (alias 'grep -E')
 
 *example.txt*
 ```bash
@@ -428,6 +435,7 @@ amet.
 ```
 
 *display lines that have either "Lorem" or "dolor" in them.*
+*បង្ហាញអត្ថបទបន្ទាត់ដែលមានពាក្យ "Lorem" ឬ "dolor" ក្នុងឯកសារ*
 ```bash
 egrep '(Lorem|dolor)' example.txt
 or
@@ -444,6 +452,7 @@ ipsum dolor sit
 
 ### e. `fgrep`
 Print lines matching a pattern - FIXED pattern matching  (alias for: 'grep -F')
+បង្ហាញអត្ថបទបន្ទាត់ដែលតាមលំនាំ - ការផ្គូផ្គងលំនាំ FIXED (alias 'grep -F')
 
 *example.txt*
 ```bash
@@ -470,6 +479,7 @@ amet.
 ```
 
 *Find the exact string '(Lorem|dolor)' in example.txt*
+*ស្វែងរកអក្សរ '(Lorem|dolor)' ក្នុងឯកសារ example.txt*
 ```bash
 fgrep '(Lorem|dolor)' example.txt
 or
@@ -481,13 +491,15 @@ foo (Lorem|dolor)
 
 ### f. `fmt`
 Simple optimal text formatter
+ទម្រង់អក្សរមានលំដាប់
 
-*example: example.txt (1 line)*
+*ឧទាហរណ៍: example.txt (1 line)*
 ```bash
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ```
 
 *output the lines of example.txt to 20 character width*
+*បង្ហាញអត្ថបទបន្ទាត់ដែលមាន ២០ពាក្យ ក្នុងឯកសារ example*
 ```bash
 cat example.txt | fmt -w 20
 ```
@@ -514,11 +526,12 @@ amet.
 ```
 
 ### g. `grep`
-Looks for text inside files. You can use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines.  
+Looks for text inside files. You can use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines.
+ស្វែងរកពាក្យក្នុងអត្ថបទឯកសារមួយ អ្នកអាចប្រើប្រាស់ grep ដើម្បីស្វែងរកវានឹងបង្ហាញលទ្ធផលជាជួរ។
 ```bash
 grep pattern filename
 ```
-Example:
+ឧទាហរណ៍:
 ```bash
 $ grep admin /etc/passwd
 _kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
@@ -526,13 +539,15 @@ _kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/f
 _krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
 ```
 You can also force grep to ignore word case by using `-i` option. `-r` can be used to search all files under the specified directory, for example:
+អ្នកអាចប្រើការស្វែងរកឯកសារដោយបង្ខំការរុករកប្រើប្រាស់ `-i`។ ចំណែក `-r` វាអាចស្វែងរកគ្រប់ឯកសារទាំងអស់ដែលស្ថិតនៅក្នុងថតឯកសារដែលអ្នកបានកំណត់។ ឧទាហរណ៍៖ 
 ```bash
 $ grep -r admin /etc/
 ```
 And `-w` to search for words only. For more detail on `grep`, check following [link](https://www.cyberciti.biz/faq/grep-in-bash).
-
+ចំណែក `-w` សម្រាប់ស្វែករកតែពាក្យប៉ុណ្ណោះ។ សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ `grep` អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://www.cyberciti.biz/faq/grep-in-bash) ។ 
 ### h. `nl`
 Number lines of files
+ជាចំនួនបន្ទាត់អត្ថបទក្នុងឯកសារមួយ។
 
 *example.txt*
 ```bash
@@ -558,6 +573,7 @@ amet.
 ```
 
 *show example.txt with line numbers*
+*ដើម្បីបង្ហាញចំនួនលេខបន្ទាត់អត្ថបទក្នុង example.txt *
 ```bash
 nl -s". " example.txt 
 ```
@@ -585,6 +601,7 @@ nl -s". " example.txt
 
 ### i. `sed`
 Stream editor for filtering and transforming text
+កំណែទម្រង់អត្ថបទដោយផ្ទាល់សម្រាប់ការបំលែងអត្ថបទ
 
 *example.txt*
 ```bash
@@ -592,6 +609,7 @@ Hello This is a Test 1 2 3 4
 ``` 
 
 *replace all spaces with hyphens*
+*ជំនួសគ្រប់ ដកឃ្លា(space) ជាមួយសហាសញ្ញា(-)*
 ```bash
 sed 's/ /-/g' example.txt
 ```
@@ -600,6 +618,7 @@ Hello-This-is-a-Test-1-2-3-4
 ```
 
 *replace all digits with "d"*
+*ជំនួសគ្រប់លេខទាំងអស់ដោយអក្សរ "d"*
 ```bash
 sed 's/[0-9]/d/g' example.txt
 ```
@@ -609,6 +628,7 @@ Hello This is a Test d d d d
 
 ### j. `sort`
 Sort lines of text files
+តម្រៀបលំដាប់អត្ថបទអក្សរជាបន្ទាត់
 
 *example.txt*
 ```bash
@@ -636,6 +656,7 @@ g
 ```
 
 *randomize a sorted example.txt*
+*តម្រៀបលំដាប់អត្ថបទអក្សរដោយចៃដន្យក្នុងឯកសារ example.txt*
 ```bash
 sort example.txt | sort -R
 ```
@@ -651,6 +672,7 @@ e
 
 ### k. `tr`
 Translate or delete characters
+បំលែងឬលុបអក្សរ
 
 *example.txt*
 ```bash
@@ -658,6 +680,7 @@ Hello World Foo Bar Baz!
 ```
 
 *take all lower case letters and make them upper case*
+*បំលែងគ្រប់អក្សរតូចទាំងអស់ទៅជាអក្សរធំ*
 ```bash
 cat example.txt | tr 'a-z' 'A-Z' 
 ```
@@ -666,6 +689,7 @@ HELLO WORLD FOO BAR BAZ!
 ```
 
 *take all spaces and make them into newlines*
+*បំលែងដកឃ្លាទាំងអស់ទៅជាចុះបន្ទាត់ថ្មី*
 ```bash
 cat example.txt | tr ' ' '\n'
 ```
@@ -679,6 +703,7 @@ Baz!
 
 ### l. `uniq`
 Report or omit repeated lines
+រាយការណ៍ឬលុបចោលជួរមានអក្សរដដែលៗ
 
 *example.txt*
 ```bash
@@ -693,6 +718,7 @@ c
 ```
 
 *show only unique lines of example.txt (first you need to sort it, otherwise it won't see the overlap)*
+*បង្ហាញអត្ថបទដែលមានតែមួយនៃ example.txt (ដំបូងអ្នកត្រូវតែតម្រៀបតាមលំដាប់ជាមុនសិន បើមិនដូច្នោះវាមិនអាចបង្ហាញអត្ថបទមានតែមួយនោះទេ)*
 ```bash
 sort example.txt | uniq
 ```
@@ -704,6 +730,7 @@ d
 ```
 
 *show the unique items for each line, and tell me how many instances it found*
+*បង្ហាញអត្ថបទនៃបន្ទាត់និមួយៗ និងចំនួនដែលបានរកឃើញក្នុងជួរបន្ទាត់ជាមួយគ្នា*
 ```bash
 sort example.txt | uniq -c
 ```
@@ -716,6 +743,7 @@ sort example.txt | uniq -c
 
 ### m. `wc`
 Tells you how many lines, words and characters there are in a file.  
+បង្ហាញប្រាប់អ្នកចំនួនបន្ទាត់ ពាក្យ និងពញ្ជនៈដែលមានក្នុងឯកសារ។
 ```bash
 wc filename
 ```
@@ -725,6 +753,7 @@ $ wc demo.txt
 7459   15915  398400 demo.txt
 ```
 Where `7459` is lines, `15915` is words and `398400` is characters.
+`7459` ចំនួនបន្ទាត់ `15915` ចំនួនពាក្យ និង `398400` ពញ្ជនៈ។
 
 ## 1.3. Directory Operations
 
@@ -738,31 +767,37 @@ Where `7459` is lines, `15915` is words and `398400` is characters.
 
 ### a. `cd`
 Moves you from one directory to other. Running this  
+អ្នកអាចផ្លាស់ទីពីទីតាំងមួយទៅទីតំាងផ្សេងទៀតដោយប្រើ 
 ```bash
 $ cd
 ```
 moves you to home directory. This command accepts an optional `dirname`, which moves you to that directory.
+ផ្លាស់ទីអ្នកពីទីតាំងដើមទៅទីតាំង `dirname` ជាទីតាំងអ្នកប្តូរទៅ
 ```bash
 cd dirname
 ```
 
 ### b. `mkdir`
 Makes a new directory.  
+បង្កើតថតឯកសារថ្មី
 ```bash
 mkdir dirname
 ```
 You can use this to create multiple directories at once within your current directory.
+អ្នកអាចបង្កើតថតឯកសារថ្មីច្រើនក្នុងការបញ្ជាតែម្តងក្នុងថតដែលអ្នកស្ថិតនៅ
 ```bash
 mkdir 1stDirectory 2ndDirectory 3rdDirectory
 ```
 You can also use this to create parent directories at the same time. For instance, if you wanted a directory named 'project1' in another subdirectory at '/samples/bash/projects/', you could run:
+អ្នកអាចបង្កើតថតឯកសារថ្មីទៅលើថតឯកសារដែលអ្នកមិនស្ថិតនៅ។ ឧទាហរណ៍អ្នកចង់បង្កើតថតឯកសារ 'project1' ក្នុង '/samples/bash/projects/' ដែលអ្នកបានស្ថិតនៅកន្លែងនោះ៖
 ```bash 
 mkdir /samples/bash/projects/project1
 ```
 If any of these directories did no already exist, they would be created as well.
-
+ប្រើថតដែលអ្នកបង្កើតនោះមិនជាន់ឈ្មោះនោះទេ វានឹងបង្កើតថតឯកសារនោះឱ្យអ្នក
 ### c. `pwd`
 Tells you which directory you currently are in.  
+សម្រាប់ប្រាប់ទីតាំងបច្ចុប្បន្នដែលអ្នកស្ថិតនៅ។
 ```bash
 pwd
 ```
@@ -804,32 +839,37 @@ pwd
 
 ### a. `bg`
 Lists stopped or background jobs; resume a stopped job in the background.
-
+បញ្ជីការបញ្ឈប់ឬការងារដែលបានដំណើរការនៅខាងក្រោយ ការផ្អាក់ដំណើរការការងារបានដំណើរការនៅខាងក្រោយ។
 ### b. `cal`
 Shows the month's calendar.
+បង្ហាញប្រតិទិនរបស់ខែនេះ
 
 ### c. `date`
 Shows the current date and time.
-
+បង្ហាញថ្ងៃខែ និងម៉ោងបច្ចុប្បន្ន
 ### d. `df`
 Shows disk usage.
+បង្ហាញទិន្នន័យការប្រើប្រាស់ ឌីស
 
 ### e. `dig`
 Gets DNS information for domain.  
+បង្ហាញព័ត៌មានឈ្មោះ DNS
 ```bash
 dig domain
 ```
 
 ### f. `du`
 Shows the disk usage of files or directories. For more information on this command check this [link](http://www.linfo.org/du.html)
+បង្ហាញទិន្នន័យការប្រើប្រាស់ឌីសនៃឯកសារឬថតសារ។ សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](http://www.linfo.org/du.html) ។ 
 ```bash
 du [option] [filename|directory]
 ```
 Options:
-- `-h` (human readable) Displays output it in kilobytes (K), megabytes (M) and gigabytes (G).
-- `-s` (supress or summarize) Outputs total disk space of a directory and supresses reports for subdirectories. 
+ជម្រើសបន្ថែម៖
+- `-h` (human readable) បង្ហាញលទ្ធផលគិតជា គីឡូបៃត៍ (kilobytes - K) មេហ្គាបៃខ្នាត (Megabytes - M) និង ជីហ្គាបៃខ្នាត (Gigabytes - G)
+- `-s` (supress or summarize) បង្ហាញទិន្នន័យសរុបឌីសនៃថតឯកសារ និង របាយការណ៍សម្រាប់ថតរង
 
-Example:
+ឧទាហរណ៍៖
 ```bash
 du -sh pictures
 1.4M pictures
@@ -837,9 +877,11 @@ du -sh pictures
 
 ### g. `fg`
 Brings the most recent job in the foreground.
+នាំមកនូវការងារថ្មីៗមកនៅផ្ទៃខាងមុខ។
 
 ### h. `finger`
 Displays information about user.  
+បង្ហាញព័ត៌មានអំពីអ្នកប្រើប្រាស់ user ។
 ```bash
 finger username
 ```
