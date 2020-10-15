@@ -887,97 +887,121 @@ finger username
 ```
 ### i. `jobs`
 Lists the jobs running in the background, giving the job number.
+បង្ហាញបញ្ជីការងារនិងចំនួនដែលកំពុងដំណើរនៅខាងក្រោយ។
 
 ### j. `last`
 Lists your last logins of specified user.  
+បង្ហាញទិន្នន័យចំនួនបានចូលប្រើប្រាស់របស់អ្នកប្រើប្រាស់ user
 ```bash
 last yourUsername
 ```
 
 ### k. `man`
 Shows the manual for specified command.  
+បង្ហាញសៀវភៅណែនាំសម្រាប់ពាក្យបញ្ជាដែលបានបញ្ជាក់។
 ```bash
 man command
 ```
 
 ### l. `passwd`
 Allows the current logged user to change their password.
-
+អនុញ្ញាតឱ្យអ្នកកំពុងប្រើប្រាស់អាចប្តូរលេខសម្ងាត់
 ### m. `ping`
 Pings host and outputs results.  
+Ping host និងបង្ហាញលទ្ធផល
 ```bash
 ping host
 ```
 
 ### n. `ps`
 Lists your processes.  
+បង្ហាញកម្មវិធីកំពុងដំណើរការ
 ```bash
 ps -u yourusername
 ```
 Use the flags ef. e for every process and f for full listing. 
+បង្ហាញព័ត៌មានលម្អិតពីបញ្ជីនិមួយៗដែលប្រើប្រាស់ flag
 ```bash
 ps -ef
 ```
 
 ### o. `quota`
 Shows what your disk quota is.  
+បង្ហាញូតាឌីសរបស់អ្នក
 ```bash
 quota -v
 ```
 
 ### p. `scp`
 Transfer files between a local host and a remote host or between two remote hosts.
+ផ្ទេរឯកសាររវាងម៉ាស៊ីនប្រើប្រាស់និងម៉ាស៊ីនបញ្ជាចម្ងាយឬរវាងម៉ាស៊ីនពីបញ្ជាពីចម្ងាយពីរ។ 
 
 *copy from local host to remote host*
+*ចម្លងពីម៉ាស៊ីនប្រើប្រាស់ទៅម៉ាស៊ីនបញ្ជាពីចម្ងាយ*
 ```bash
 scp source_file user@host:directory/target_file
 ```
-*copy from remote host to local host*
+*copy from remote host to local host* /
+*ចម្លងពីម៉ាស៊ីនបញ្ជាពីចម្ងាយមកមា៉ស៊ីនប្រើប្រាស់*
 ```bash
 scp user@host:directory/source_file target_file
 scp -r user@host:directory/source_folder target_folder
 ```
 This command also accepts an option `-P` that can be used to connect to specific port.  
+ការបញ្ជានេះមានជម្រើសបន្ថែម `-P` ដែលអាចប្រើប្រាស់សម្រាប់ភ្ជាប់ប្រើប្រាស់ Port ណាមួយបាន
+
 ```bash
 scp -P port user@host:directory/source_file target_file
 ```
 
 ### q. `ssh`
 ssh (SSH client) is a program for logging into and executing commands on a remote machine.  
+shh (SSH client) គឺជាកម្មវិធីមួយសម្រាប់ចូលប្រើប្រាស់និងដំណើរការការបញ្ជាទៅកាន់ម៉ាស៊ីនបញ្ជាពីចម្ងាយ។
+
 ```bash
 ssh user@host
 ```
+
 This command also accepts an option `-p` that can be used to connect to specific port.  
+ការបញ្ជានេះមានជម្រើសបន្ថែម `-p` ដែលអាចប្រើប្រាស់សម្រាប់ភ្ជាប់ប្រើប្រាស់ Port ណាមួយបាន
+
 ```bash
 ssh -p port user@host
 ```
 
 ### r. `top`
 Displays your currently active processes.
+បង្ហាញពីដំណើរការបច្ចុប្បន្នរបស់អ្នក
 
 ### s. `uname`
 Shows kernel information.  
+បង្ហាញពីព័ត៌មាន kernel 
 ```bash
 uname -a
 ```
 
 ### t. `uptime`
 Shows current uptime.
+បង្ហាញពីពេលវេលាបច្ចុប្បន្នប្រើប្រាស់កុំព្យូទ័រ
 
 ### u. `w`
 Displays who is online.
+បង្ហាញនរណាដែលអាចចូលប្រើប្រាស់បាន
 
 ### v. `wget`
-Downloads file.  
+Downloads file. 
+សម្រាប់ទាញយកឯកសារ 
 ```bash
 wget file
 ```
 
 ### w. `whoami`
 Return current logged in username.
+បង្ហាញពីឈ្មោះអ្នកដែលកំពុងប្រើប្រាស់បច្ចុប្បន្ន
 
 ### x. `whois`
-Gets whois information for domain.  
+Gets whois information for domain. 
+បង្ហាញព័ត៌មានម្ចាស់ domain
 ```bash
 whois domain
 ```
@@ -995,36 +1019,42 @@ whois domain
 
 ### a. `kill`
 Kills (ends) the processes with the ID you gave.  
+បញ្ឈប់ការដំណើរការណាមួយដោយ ID
 ```bash
 kill PID
 ```
 
 ### b. `killall`
 Kill all processes with the name.  
+បញ្ឈប់ការដំណើរការណាមួយដោយឈ្មោះ
 ```bash
 killall processname
 ```
 
 ### c. &
 The `&` symbol instructs the command to run as a background process in a subshell.
+សញ្ញា `&` ជាការបញ្ជាបន្ថែមផ្សេងទៀត
+
 ```bash
 command &
 ```
 
 ### d. `nohup`
 nohup stands for "No Hang Up". This allows to run command/process or shell script that can continue running in the background after you log out from a shell.
+nohup មកពីពាក្យ "No Hang Up" អនុញ្ញាតឱ្យអ្នកបញ្ជាឬដំណើរការ script ណាមួយដែលអ្នកបានកំណត់វានឹងដំណើរការរហូតទោះបីអ្នកបានចាកចេញក៏ដោយ។
 ```bash
 nohup command
 ```
 Combine it with `&` to create background processes 
+ភ្ជាប់ការដំណើរការផ្សេងទៀតដោយសញ្ញា `&` ដើម្បីបង្កើតការដំណើរការខាងក្រោយ
 ```bash
 nohup command &
 ```
 
 # 2. Basic Shell Programming
 
-
 The first line that you will write in bash script files is called `shebang`. This line in any script determines the script's ability to be executed like a standalone executable without typing sh, bash, python, php etc beforehand in the terminal.
+បន្ទាត់ដំបូងដែលអ្នកនឹងត្រូវសរសេរជា script ត្រូវបានគេហៅថា `shebang` ។ បន្ទាត់ script នេះវាអាចមានសមត្ថភាពដំណើរ script ដោយមិនចំបាច់ប្រើប្រាស់ sh, bash, python, php etc នៅខាងដើមក្នុងផ្ទាំងពណ៌ខ្មៅដើម្បីធ្វើការបញ្ជាទៀតឡើយ។
 
 ```bash
 #!/usr/bin/env bash
@@ -1033,15 +1063,17 @@ The first line that you will write in bash script files is called `shebang`. Thi
 ## 2.1. Variables
 
 Creating variables in bash is similar to other languages. There are no data types. A variable in bash can contain a number, a character, a string of characters, etc. You have no need to declare a variable, just assigning a value to its reference will create it.
+ការបង្កើតអថេរនៅក្នុង bash គឺស្រដៀងនឹងភាសាផ្សេងទៀត។ វាមិនមានប្រភេទទិន្នន័យទេ អថេរក្នុងប៊្លុកអាចមានលេខតួអក្សរ។ អ្នកមិនចាំបាច់ប្រកាសប្រភេទអថេរទេគ្រាន់តែផ្តល់តម្លៃទៅវា វានឹងបង្កើតដោយខ្លួនឯង។
 
-Example:
+ឧទាហរណ៍៖
 ```bash
 str="hello world"
 ```
 
 The above line creates a variable `str` and assigns "hello world" to it. The value of variable is retrieved by putting the `$` in the beginning of variable name.
+ខាងលើនេះជាការបង្កើតអថេរ `str` ដែលមានតម្លៃ "hello world"។ ក្នុងការយកមកប្រើប្រាស់អ្នកគ្រាន់តែដាក់សញ្ញា `$` នៅខាងដើមអថេរជាការស្រេច។
 
-Example:
+ឧទាហរណ៍៖
 ```bash
 echo $str   # hello world
 ```
