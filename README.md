@@ -1079,8 +1079,9 @@ echo $str   # hello world
 ```
 ## 2.2. Array
 Like other languages bash has also arrays. An array is a variable containing multiple values. There's no maximum limit on the size of array. Arrays in bash are zero based. The first element is indexed with element 0. There are several ways for creating arrays in bash which are given below.
+វាក៏ដូចជាភាសាដទៃដែរគឺមាន array ដូចគ្នា។ Array មួយយើងបានដឹងហើយវាអាចផ្ទុកតម្លៃជាច្រើនក្នុងអថេរតែមួយដែលវាមានទំហំមិនអាចកំណត់បានឡើយ។ Array នៅក្នុង bash ក៏ចាប់ផ្តើមពី index ទីសូន្យ។ ខាងក្រោមនេះជាវិធីបង្កើត array ក្នុង bash ៖
 
-Examples:
+ឧទាហរណ៍៖
 ```bash
 array[0]=val
 array[1]=val
@@ -1089,18 +1090,21 @@ array=([2]=val [0]=val [1]=val)
 array=(val val val)
 ```
 To display a value at specific index use following syntax:
+ដើម្បីបង្ហាញតម្លៃស្ថិតនៅ index ណាមួយអ្នកអាចប្រើប្រាស់ដូចខាងក្រោមនេះ
 
 ```bash
 ${array[i]}     # where i is the index
 ```
 
 If no index is supplied, array element 0 is assumed. To find out how many values there are in the array use the following syntax:
+ប្រសិនបើអ្នកមិនបានដឹងពីចំនួនធាតុ array ឬមិនដឹងវាបានបង្កើតដោយមាន array ប្រើចំនួនលំដាប់លេខ index ទីសូន្យឬនោះទេ។ ដើម្បីទាញយកតម្លៃក្នុង array មកប្រើដោយមិនស្គាល់ប្រភេទ index អ្នកអាចធ្វើតាមវិធីខាងក្រោម៖
 
 ```bash
 ${#array[@]}
 ```
 
 Bash has also support for the ternary conditions. Check some examples below.
+Bash ក៏ស្គាល់សម្រាប់លក្ខខណ្ឌពិសេសមួយចំនួន។ ខាងក្រោមនេះជាឧទាហរណ៍៖
 
 ```bash
 ${varname:-word}    # if varname exists and isn't null, return its value; otherwise return word
@@ -1112,6 +1116,7 @@ ${varname:offset:length}    # performs substring expansion. It returns the subst
 ## 2.3 String Substitution
 
 Check some of the syntax on how to manipulate strings
+ដើម្បីពិនិត្យ syntax របៀបរៀបចំប្រភេទ string
 
 ```bash
 ${variable#pattern}         # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
@@ -1125,6 +1130,7 @@ ${#varname}     # returns the length of the value of the variable as a character
 
 ## 2.4. Functions
 As in almost any programming language, you can use functions to group pieces of code in a more logical way or practice the divine art of recursion. Declaring a function is just a matter of writing function my_func { my_code }. Calling a function is just like calling another program, you just write its name.
+ដូចគ្នាទៅនឹងភាសាដទៃ អ្នកអាចប្រើប្រាស់មុខងារ (function) ដើម្បីបែងចែកជាក្រុមងាយស្រួលក្នុងការអនុវត្តទៅការងារផ្សេងៗ។ ការបង្កើតមុខងារ (function) គឺគ្រាន់តែសរសេរ ឈ្មោះមុខងារ { កូដការងារ }។ ការហៅមកប្រើប្រាស់មុខងារនោះគ្រាន់តែហៅឈ្មោះរបស់វា។
 
 ```bash
 function name() {
@@ -1132,7 +1138,7 @@ function name() {
 }
 ```
 
-Example:
+ឧទាហរណ៍៖
 ```bash
 #!/bin/bash
 function hello {
@@ -1147,10 +1153,12 @@ say "hello world!"
 ```
 
 When you run the above example the `hello` function will output "world!". The above two functions `hello` and `say` are identical. The main difference is function `say`. This function, prints the first argument it receives. Arguments, within functions, are treated in the same manner as arguments given to the script.
+ពេលអ្នកគ្រាន់តែហៅឈ្មោះមុខងារថា `hello` នោះវានឹងបង្ហាញលទ្ធផល "world!"។ មុខងារទាំងទីពីរមាន `hello` និង `say` ក៏ជា function ដូចគ្នា។ ភាពខុសគ្នារបស់មុខងារនេះគឺ function say វាត្រូវការប៉ារ៉ាម៉ែត្រដើម្បីយកទៅបង្ហាញលទ្ធផលក្នុងមុខងាររបស់ខ្លួនវាផ្ទាល់។ 
 
 ## 2.5. Conditionals
 
 The conditional statement in bash is similar to other programming languages. Conditions have many form like the most basic form is `if` expression `then` statement where statement is only executed if expression is true.
+ការគ្រប់គ្រងល័ក្ខខ័ណ្ឌ (Condition statement) ក្នុង bash គឺស្រដៀងទៅនឹងភាសាដទៃដែរ។ ល័ក្ខខ័ណ្ឌមានច្រើនទម្រង់ដូចជាទម្រង់មូលដ្ឋានបំផុតគឺ if ប្រសិនបើល័ក្ខខ័ណ្ឌត្រឹមត្រូវវានឹងដំណើរការកិច្ចដែលសិ្ថតនៅក្នុងខ្លួនវា។ 
 
 ```bash
 if [ expression ]; then
@@ -1161,6 +1169,7 @@ fi
 ```
 
 Sometime if conditions becoming confusing so you can write the same condition using the `case statements`.
+ប្រសិនបើវាមានល័ក្ខខ័ណ្ឌច្រើនស្មុកស្មាញ អ្នកអាចប្រើល័ក្ខខ័ណ្ឌមួយទៀតហៅថា `case statements`។ 
 
 ```bash
 case expression in
@@ -1172,7 +1181,7 @@ case expression in
 esac
 ```
 
-Expression Examples:
+ឧទាហរណ៍ល័ក្ខខ័ណ្ឌ៖
 
 ```bash
 statement1 && statement2  # both statements are true
@@ -1211,6 +1220,7 @@ file1 -ot file2     # file1 is older than file2
 ## 2.6. Loops
 
 There are three types of loops in bash. `for`, `while` and `until`.
+ការវិលជុំមានបីប្រភេទក្នុង bash គឺ `for`, `while` និង `until` ។
 
 Different `for` Syntax:
 ```bash
@@ -1249,6 +1259,7 @@ done
 ## Set an alias
 
 Run `nano ~/.bash_profile` and add the following line:
+ដំណើរការ `nano ~/.bash_profile` និងបន្ថែមកូដចូលទៅក្នុង editor៖ 
 
 ```bash
 alias dockerlogin='ssh www-data@adnan.local -p2222'  # add your alias in .bash_profile
@@ -1257,12 +1268,14 @@ alias dockerlogin='ssh www-data@adnan.local -p2222'  # add your alias in .bash_p
 ## To quickly go to a specific directory
 
 Run `nano ~/.bashrc` and add the following line:
+ដំណើរការ `nano ~/.bashrc` និងបន្ថែមកូដចូលទៅក្នុង editor៖ 
 
 ```bash
 export hotellogs="/workspace/hotel-api/storage/logs"
 ```
 
 Now you can use the saved path:
+អ្នកអាចរក្សាទុក path ខាងលើបានដោយប្រើ៖ 
 
 ```bash
 source ~/.bashrc
@@ -1272,20 +1285,25 @@ cd $hotellogs
 ## Re-execute the previous command
 
 This goes back to the days before you could rely on keyboards to have an "up" arrow key, but can still be useful. 
-To run the last command in your history
+To run the last command in your history 
+អ្នកអាចត្រលប់ទៅកាន់ការបញ្ជាពីមុនៗបានដោយចុចសញ្ញា "ព្រួញឡើងលើ" នៅលើក្តារចុច ឬប្រើសញ្ញាឧទានពីរក៏អាចត្រលប់ទៅកាន់ការបញ្ជាចាស់បាន។
+
 ```bash
 !!
 ```
 A common error is to forget to use `sudo` to prefix a command requiring privileged execution. Instead of typing the whole command again, you can:
+ការបញ្ជាមួយចំនួនអាច errro គឺវាត្រូវការ `sudo` ដើម្បីបញ្ជាជាប្រតិបត្តិដែលមានឯកសិទ្ធិ។ អ្នកអាចប្រើប្រាស់ដូចខាងក្រោមនេះបាន៖
+
 ```bash
 sudo !!
 ```
 This would change a `mkdir somedir` into `sudo mkdir somedir`.
+អ្នកគួរតែប្តូរការសរសេរ `mkdir somedir` ទៅជា `sudo mkdir somedir` ដែលទាក់ទងនឹងប្រតិបត្តិដែលមានឯកសិទ្ធិ។
 
 ## Exit traps
 
 Make your bash scripts more robust by reliably performing cleanup.
-
+ការសរសេរ script ក្នុង bash ឱ្យមានភាពងាយអានមានសណ្តាប់ឆ្នាប់និងស្អាតដែលមាន comment ព័ត៌មានបន្ថែម។
 ```bash
 function finish {
   # your cleanup here. e.g. kill any forked processes
@@ -1297,6 +1315,8 @@ trap finish EXIT
 ## Saving your environment variables
 
 When you do `export FOO = BAR`, your variable is only exported in this current shell and all its children, to persist in the future you can simply append in your `~/.bash_profile` file the command to export your variable
+ពេលអ្នកប្រើ `export FOO = BAR` អថេររបស់អ្នកត្រូវតែ export ដាក់ចូលទៅ shell និង shell កូនដែលពាក់ព័ន្ធព្រោះជៀសវាងបញ្ហាថ្ងៃក្រោយភ្លេច export ចូល `~/.bash_profile` ពេលអ្នកហៅអថេរណាមួយមិនត្រឹមត្រូវក្នុង shell នោះ។
+
 ```bash
 echo export FOO=BAR >> ~/.bash_profile
 ```
@@ -1304,8 +1324,10 @@ echo export FOO=BAR >> ~/.bash_profile
 ## Accessing your scripts
 
 You can easily access your scripts by creating a bin folder in your home with `mkdir ~/bin`, now all the scripts you put in this folder you can access in any directory.
+អ្នកងាយស្រួលក្នុងការចូលទៅប្រើប្រាស់ script ដែលបានបង្កើតក្នុងថតឯកសារ bin ក្នុងទំព័រដើមដោយ `mkdir ~/bin` ព្រោះគ្រប់ script ទាំងអស់ដែលស្ថិតក្នុងថតនេះវាអាចមានសិទ្ធិប្រើប្រាស់គ្រប់ថតទាំងអស់។
 
 If you can not access, try append the code below in your `~/.bash_profile` file and after do `source ~/.bash_profile`.
+ប្រសិនបើអ្នកមិនអាចចូលប្រើប្រាស់បាន អ្នកអាចប្រើប្រាស់កូដខាងក្រោមនេះបាននៅក្នុង `~/.bash_profile` និងបន្ទាប់មកប្រើ command `source ~/.bash_profile` ៖
 ```bash
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -1315,6 +1337,7 @@ fi
 
 # 4. Debugging
 You can easily debug the bash script by passing different options to `bash` command. For example `-n` will not run commands and check for syntax errors only. `-v` echo commands before running them. `-x` echo commands after command-line processing.
+អ្នកអាច debug ក្នុង bash script ដោយបញ្ចូលជម្រើសផ្សេងគ្នាទៅក្នុង `bash` command។ ឧទាហរណ៍ `-n` វានឹងមិនដំណើរការការបញ្ជាទេ និងពិនិត្យ syntax ដែល error។ `-v`echo commands មុនដំណើរការ `command`។ `-x` echo commands បន្ទាប់ពី `command-line` បានដំណើរការ។ 
 
 ```bash
 bash -n scriptname
@@ -1329,9 +1352,12 @@ bash -x scriptname
 - Spread the word
 
 ## Translation
+- [English | Original](https://github.com/Idnan/bash-guide)
 - [Chinese | 简体中文](https://github.com/vuuihc/bash-guide)
 - [Turkish | Türkçe](https://github.com/omergulen/bash-guide)
 - [Japanese | 日本語](https://github.com/itooww/bash-guide)
+- [Vietnamese | Tiếng Việt](https://github.com/nguyenvanhieuvn/hoc-bash)
+- [Khmer | ភាសាខ្មែរ](https://github.com/samreachyan/bash-guide)
 
 ## License
 
