@@ -23,12 +23,13 @@
 # 1. Basic Operations
 
 ### a. `export`
-ប្រើសម្រាប់បង្ហាញ់អំពីមជ្ឈដ្ឋាន variable ក្នុងការដំឡើងកម្មវិធីអ្វីមួយឬ Configuration ណាមួយ។ ប្រសិនបើអ្នកចង់មើល variable ដែលបានប្រើនោះគ្រាន់តែប្រើ `echo $VARIABLE_NAME` ។
-Displays all environment variables. If you want to get details of a specific variable, use `echo $VARIABLE_NAME`.  
+ប្រើសម្រាប់បង្ហាញអំពីមជ្ឈដ្ឋាន variable ក្នុងការដំឡើងកម្មវិធីអ្វីមួយ។ ប្រសិនបើអ្នកចង់មើល variable ដែលបានប្រើនោះគ្រាន់តែប្រើ `echo $VARIABLE_NAME` ។
+
 ```bash
 export
 ```
-ឧទាហរណ៍:
+
+ឧទាហរណ៍៖
 ```bash
 $ export
 AWS_HOME=/Users/adnanadnan/.aws
@@ -42,12 +43,12 @@ $ echo $AWS_HOME
 ```
 
 ### b. `whatis`
-whatis shows description for user commands, system calls, library functions, and others in manual pages
-whatis សម្រាប់បង្ហាញព័ត៌មានបន្ថែមពី commands, ប្រព័ន្ធប្រតិបត្តិការណ៍, បណ្ណាល័យ មុខងារនិង ទំព័រទាក់ទង។
+whatis សម្រាប់បង្ហាញព័ត៌មានបន្ថែមពី ការបញ្ជា `ការបញ្ជា`, `ព្រឹតិ្តការណ៍`, `បណ្ណាល័យ` , `មុខងារ`និង , `ទំព័រពាក់ព័ន្ធ` ។
+
 ```bash
 whatis something
 ```
-ឧទាហរណ៍:
+ឧទាហរណ៍៖
 ```bash
 $ whatis bash
 bash (1)             - GNU Bourne-Again SHell
@@ -59,19 +60,19 @@ uname (2)            - get name and information about current kernel
 ```
 
 ### c. `whereis`
-whereis searches for executables, source files, and manual pages using a database built by system automatically.
-whereis សម្រាប់អនុវត្តស្វែងរកប្រភពឯកសារ និង ទំព័រ​ទាក់ទងដែលបានប្រើប្រាស់ដំឡើងនៅក្នុងប្រព័ន្ធ។
+
+whereis សម្រាប់អនុវត្តស្វែងរកប្រភពឯកសារ និង ទំព័រពាក់ព័ន្ធដែលបានដំឡើងប្រើប្រាស់នៅក្នុងប្រព័ន្ធស្វ័យប្រវត្តិ។
 ```bash
 whereis name
 ```
-ឧទាហរណ៍:
+ឧទាហរណ៍៖
 ```bash
 $ whereis php
 /usr/bin/php
 ```
 
 ### d. `which`
-which searches for executables in the directories specified by the environment variable PATH. This command will print the full path of the executable(s).
+
 which សម្រាប់អនុវត្តស្វែងរកទីតាំងតាមមជ្ឈដ្ឋាន variable ស្ថិតនៅ។ វានឹងបង្ហាញគ្រប់ទីតាំងដែលពាក់ព័ន្ធការអនុវត្តខាងលើ។
 ```bash
 which program_name 
@@ -83,8 +84,9 @@ $ which php
 ```
 
 ### e. clear
-Clears content on window.
-វាសម្រាប់សម្អាតអត្ថបទដែលមាននៅលើអេក្រង់បង្ហាញ window ឬ terminal។
+
+វាសម្រាប់សម្អាតអត្ថបទដែលមាននៅលើអេក្រង់បង្ហាញ window ។
+
 ## 1.1. File Operations
 <table>
    <tr>
@@ -114,12 +116,7 @@ Clears content on window.
 </table>
 
 ### a. `cat`
-It can be used for the following purposes under UNIX or Linux.  
-* Display text files on screen
-* Copy text files  
-* Combine text files  
-* Create new text files  
-វាឃើញប្រើច្រើនភាគច្រើននៅក្នុង UNIX ឬ Linux។
+វាឃើញប្រើភាគច្រើននៅក្នុង UNIX ឬ Linux។
 * សម្រាប់បង្ហាញ អក្សរ លើអេក្រង់
 * សម្រាប់ចម្លងអត្ថបទឯកសារ
 * សម្រាប់បញ្ចូលអត្ថបទឯកសារ
@@ -133,92 +130,93 @@ cat < file1 > file2 #copy file1 to file2
 ```
 
 ### b. `chmod`
-The chmod command stands for "change mode" and allows you to change the read, write, and execute permissions on your files and folders. For more information on this command check this [link](https://ss64.com/bash/chmod.html).
-chmod ដែលមកពីពាក្យ "change mode" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម៉ូដឯកសារ read write ឬ execute លើឯកសារនិងក្របផ្ទុកឯកសារ។ សម្រាប់ព័ត៌មានលម្អិតលោកអ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://ss64.com/bash/chmod.html) ។ 
+
+chmod ដែលមកពីពាក្យ "change mode" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម៉ូដឯកសារ read write ឬ execute លើឯកសារនិងថតឯកសារ។ សម្រាប់ព័ត៌មានលម្អិតលោកអ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://ss64.com/bash/chmod.html) ។ 
 ```bash
 chmod -options filename
 ```
 
 ### c. `chown`
-The chown command stands for "change owner", and allows you to change the owner of a given file or folder, which can be a user and a group. Basic usage is simple forward first comes the user (owner), and then the group, delimited by a colon.
-chown ដែលមកពីពាក្យ "change owner" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម្ចាស់កម្មសិទ្ធិលើឯកសារឬក្របឯកសារណាមួយបាន ដែលត្រូវបានកំណត់ជា user ឬ group។ ការប្រើប្រាស់ភាគច្រើនគឺអនុញ្ញាតពី user មួយទៅ group មួយទៀតដើម្បីមានសិទ្ធិចូលមកប្រើប្រាស់ដែរ។ 
+
+chown ដែលមកពីពាក្យ "change owner" ដែលអនុញ្ញាតឱ្យអ្នកអាចប្តូរម្ចាស់កម្មសិទ្ធិលើឯកសារឬថតឯកសារណាមួយបាន ដែលត្រូវបានកំណត់ជា user ឬ group។ ការប្រើប្រាស់ភាគច្រើនគឺអនុញ្ញាតពី user មួយទៅ group មួយទៀតដើម្បីមានសិទ្ធិចូលមកប្រើប្រាស់ដែរ។ 
 ```bash
 chown -options user:group filename
 ```
 
 ### d. `cp`
-Copies a file from one location to other.  
+
 សម្រាប់ចម្លងឯកសារពីកន្លែងមួយទៅកន្លែងណាមួយផ្សេងទៀត។
 ```bash
 cp filename1 filename2
 ```
-Where `filename1` is the source path to the file and `filename2` is the destination path to the file.
+
 `filename1` ត្រូវតែជាទីតាំងរួមឈ្មោះឯកសារ និង `filename2` ជាទីតាំងរួមទាំងឈ្មោះឯកសារដែលលោកអ្នកចង់ចម្លងទៅ។
 ### e. `diff`
-Compares files, and lists their differences. 
-សម្រាប់ប្រៀបធៀបឯកសារ និង បង្ហាញបញ្ជីពីភាពខុសគ្នានៃឯកសារ។ 
+
+សម្រាប់ប្រៀបធៀបឯកសារ និងបង្ហាញបញ្ជីពីភាពខុសគ្នានៃឯកសារ។ 
 ```bash
 diff filename1 filename2
 ```
 
 ### f. `file`
-Determine file type.  
+
 សម្រាប់កំណត់ប្រភេទឯកសារ។
 ```bash
 file filename
 ```
-ឧទាហរណ៍:
+ឧទាហរណ៍៖
 ```bash
 $ file index.html
  index.html: HTML document, ASCII text
 ```
 ### g. `find`
-Find files in directory.
+
 សម្រាប់ស្វែងរកឯកសារនិងទីតាំងណាមួយ។
 ```bash
 find directory options pattern
 ```
-ឧទាហរណ៍:
+
+ឧទាហរណ៍៖
 ```bash
 $ find . -name README.md
 $ find /home/user1 -name '*.png'
 ```
 
 ### h. `gunzip`
-Un-compresses files compressed by gzip.  
-សម្រាប់ពន្លាឯកសារក្នុងបង្រួមឯកសារ gzip ។
+
+សម្រាប់ពន្លាឯកសារដែលបានបង្រួមដោយ gzip ។
 ```bash
 gunzip filename
 ```
 
 ### i. `gzcat`
-Lets you look at gzipped file without actually having to gunzip it.  
+
 អនុញ្ញាតឱ្យអ្នកមើលឯកសារ gzipped ដោយមិនចាំបាច់មាន gunzip ។
 ```bash
 gzcat filename
 ```
 
 ### j. `gzip`
-Compresses files.  
+ 
 សម្រាប់បង្រួមឯកសារ។
 ```bash
 gzip filename
 ```
 
 ### k. `head`
-Outputs the first 10 lines of file  
-សម្រាប់បង្ហាញអត្ថបទ ១០ បន្ទាត់ដំបូងក្នុងឯកសារ។
+
+សម្រាប់បង្ហាញអត្ថបទ ១០បន្ទាត់ដំបូងក្នុងឯកសារ។
 ```bash
 head filename
 ```
 
 ### l. `lpq`
-Check out the printer queue.  
+
 ពិនិត្យមើលលទ្ធផលបង្ហាញជាជួរៗ។
 ```bash
 lpq
 ```
-ឧទាហរណ៍:
+ឧទាហរណ៍៖
 ```bash
 $ lpq
 Rank    Owner   Job     File(s)                         Total Size
@@ -227,26 +225,27 @@ active  adnanad 59      demo                            399360 bytes
 ```
 
 ### m. `lpr`
-Print the file.  
-សម្រាប់បង្ហាញឯកសារ។
+
+សម្រាប់បង្ហាញលទ្ធផលឯកសារ។
 ```bash
 lpr filename
 ```
 
 ### n. `lprm`
-Remove something from the printer queue.  
+
 សម្រាប់លុបអ្វីមួយពីលទ្ធផលបង្ហាញជាជួរនោះ។
 ```bash
 lprm jobnumber
 ```
 
 ### o. `ls`
-Lists your files. `ls` has many options: `-l` lists files in 'long format', which contains the exact size of the file, who owns the file, who has the right to look at it, and when it was last modified. `-a` lists all files, including hidden files. For more information on this command check this [link](https://ss64.com/bash/ls.html).  
+
 សម្រាប់បង្ហាញឯកសារជាបញ្ជី។ `ls` មានជម្រើសជាច្រើន `-l` បង្ហាញព័ត៌មានឯកសារពី ទំហំ ម្ចាស់កម្មសិទ្ធិ និងថ្ងៃកំណែចុងក្រោយ។ `-a` សម្រាប់បង្ហាញបញ្ជីឯកសារ និងបង្ហាញឯកសារដែលមិនត្រូវបានបង្ហាញ។ សម្រាប់ព័ត៌មានលម្អិតលោកអ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://ss64.com/bash/ls.html) ។ 
 ```bash
 ls option
 ```
-ឧទាហរណ៍:
+
+ឧទាហរណ៍៖
 <pre>
 $ ls -la
 rwxr-xr-x   33 adnan  staff    1122 Mar 27 18:44 .
@@ -260,48 +259,47 @@ drwxr-xr-x  17 adnan  staff     578 Mar 27 23:36 .git
 </pre>
 
 ### p. `more`
-Shows the first part of a file (move with space and type q to quit).  
-សម្រាប់បង្ហាញផ្នែកដំបូងនៃឯកសារ (លោកអ្នកអាចរំកិលចុះក្រោមដោយប្រើ space ឬចុច q ដើម្បីបញ្ចប់)។
+
+សម្រាប់បង្ហាញផ្នែកដំបូងនៃឯកសារ (លោកអ្នកអាចរំកិលចុះក្រោមដោយប្រើ `space` ឬចុច `q` ដើម្បីបញ្ចប់)។
 ```bash
 more filename
 ```
 
 ### q. `mv`
-Moves a file from one location to other.  
+
 សម្រាប់ផ្លាស់ប្តូរទីតាំងឯកសារទៅកន្លែងផ្សេងមួយទៀត។
 
 ```bash
 mv filename1 filename2
 ```
-Where `filename1` is the source path to the file and `filename2` is the destination path to the file.
+
 `filename1` ត្រូវតែជាទីតាំងរួមឈ្មោះឯកសារ និង `filename2` ជាទីតាំងរួមទាំងឈ្មោះឯកសារដែលលោកអ្នកចង់ផ្លាស់ប្តូរទៅ។
 
-Also it can be used for rename a file.
 វាក៏អាចប្រើសម្រាប់កែឈ្មោះឯកសារផងដែរ។
 ```bash
 mv old_name new_name
 ```
 
 ### r. `rm`
-Removes a file. Using this command on a directory gives you an error.
-លុបចេញឯកសារ។ ការប្រើប្រាស់ command នេះនៅលើថតឯកសារផ្តល់ឱ្យអ្នកនូវកំហុស។
+
+សម្រាប់លុបចេញឯកសារ។ ការប្រើប្រាស់ `command` នេះនៅលើថតឯកសារផ្តល់ឱ្យអ្នកនូវកំហុស។
 `rm: directory: is a directory`
-To remove a directory you have to pass `-r` which will remove the content of the directory recursively. Optionally you can use `-f` flag to force the deletion i.e. without any confirmations etc.
-ដើម្បីលុបថតឯកសារអ្នកត្រូវប្រើ `-r` ដែលនឹងលុបអត្ថបទវិលជុំ។ ជម្រើសផ្សេងអ្នកអាចប្រើ `-f` សម្រាប់បង្ខំឱ្យលុបដោយគ្មានការបញ្ជាក់ណាមួយ។ 
+
+ដើម្បីលុបថតឯកសារអ្នកត្រូវប្រើ `-r` ដែលនឹងលុបអត្ថបទវិលជុំ(recursive)។ ជម្រើសផ្សេងអ្នកអាចប្រើ `-f` សម្រាប់បង្ខំ(force) ឱ្យលុបដោយគ្មានការបញ្ជាក់ណាមួយ។ 
 ```bash
 rm filename
 ```
 
 ### s. `tail`
-Outputs the last 10 lines of file. Use `-f` to output appended data as the file grows.  
-សម្រាប់បង្ហាញ់លទ្ធផលនៃឯកសារចំនួន ១០ បន្ទាត់ចុងក្រោយ។ `-f` ដើម្បីបង្ហាញទិន្ន័យបន្ថែមនៅពេលឯកសារនោះ។
+
+សម្រាប់បង្ហាញលទ្ធផលនៃឯកសារចំនួន ១០ បន្ទាត់ចុងក្រោយ។ `-f` ដើម្បីបង្ហាញទិន្នន័យបន្ថែមនៅពេលឯកសារនោះ។
 ```bash
 tail filename
 ```
 
 ### t. `touch`
-Updates access and modification time stamps of your file. If it doesn't exists, it'll be created.
-ធ្វើបច្ចុប្បន្នភាពការចូលដំណើរការនិងការផ្លាស់ប្តូរពេលវេលានៃឯកសាររបស់អ្នក។ ប្រសិនបើវាមិនមានជាន់ឈ្មោះឯកសារណាមួយទេ វានឹងត្រូវបានបង្កើតឡើង។
+
+ការបង្កើតឯកសារថ្មី និងការផ្លាស់ប្តូរពេលវេលានៃឯកសាររបស់អ្នក។ ប្រសិនបើវាមិនមានជាន់ឈ្មោះឯកសារណាមួយទេ វានឹងត្រូវបានបង្កើតឡើង។
 ```bash
 touch filename
 ```
@@ -333,14 +331,13 @@ $ touch trick.md
 </table>
 
 ### a. `awk`
-awk is the most useful command for handling text files. It operates on an entire file line by line. By default it uses whitespace to separate the fields. The most common syntax for awk command is
-awk គឺជាពាក្យបញ្ជា command ដែលមានប្រយោជន៍បំផុតសម្រាប់ដោះស្រាយឯកសារអត្ថបទ។ វាដំណើរការលើខ្សែឯកសារទាំងមូលតាមបន្ទាត់។ តាមលំនាំដើមវាប្រើចន្លោះទំនេរដើម្បីបំបែកវាល។ វាជាពាក្យសម្រាប់យបញ្ជា awk
+
+`awk` គឺជាពាក្យបញ្ជា `command` ដែលមានប្រយោជន៍បំផុតសម្រាប់ដោះស្រាយឯកសារអត្ថបទ។ វាដំណើរការលើឯកសារទាំងមូលតាមបន្ទាត់។ តាមលំនាំដើមវាប្រើចន្លោះទំនេរដើម្បីបំបែកវាល។ វាជាពាក្យសម្រាប់យបញ្ជា `awk`
 
 ```bash
 awk '/search_pattern/ { action_to_take_if_pattern_matches; }' file_to_parse
 ```
 
-Lets take following file `/etc/passwd`. Here's the sample data that this file contains:
 អ្នកអាចយកគំរូឯកសារ `/etc/passwd`. នេះជាទិន្នន័យគំរូដែលឯកសារនេះមាន៖
 
 ```
@@ -350,12 +347,12 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
 ```
-So now lets get only username from this file. Where `-F` specifies that on which base we are going to separate the fields. In our case it's `:`. `{ print $1 }` means print out the first matching field.
-ឥឡូវយើងសាកយកតែ username ពីឯកសារមួយនេះ។ `-F` សម្រាប់បំបែកតំបន់។ ក្នុងករណីនេះ `:`. `{ print $1 }` សម្រាប់បង្ហាញការផ្ទៀងផ្ទាត់តំបន់ដំបូង។
+
+ឥឡូវយើងសាកយកតែ `username` ពីឯកសារមួយនេះ។ `-F` សម្រាប់បំបែកតំបន់។ ក្នុងករណីនេះ `:`. `{ print $1 }` សម្រាប់បង្ហាញការផ្ទៀងផ្ទាត់តំបន់ដំបូង។
 ```bash
 awk -F':' '{ print $1 }' /etc/passwd
 ```
-After running the above command you will get following output.
+
 បន្ទាប់ពីបានដំណើរការការបញ្ជាខាងលើអ្នកនឹងទទួលបានលទ្ធផលដូចខាងក្រោម។
 ```
 root
@@ -364,11 +361,10 @@ bin
 sys
 sync
 ```
-For more detail on how to use `awk`, check following [link](https://www.cyberciti.biz/faq/bash-scripting-using-awk).
+
 សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ `awk` អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://www.cyberciti.biz/faq/bash-scripting-using-awk) ។ 
 
 ### b. `cut`
-Remove sections from each line of files.
 ការលុបផ្នែកណាមួយក្នុងឯកសារ។
 
 *example.txt*
@@ -376,7 +372,6 @@ Remove sections from each line of files.
 red riding hood went to the park to play
 ```
 
-*show me columns 2 , 7 , and 9 with a space as a separator*
 *ដើម្បីបង្ហាញជួរឈរទី២ ៧ និង ៩ ដែលមានដកឃ្លាទុក*
 ```bash
 cut -d " " -f2,7,9 example.txt
@@ -386,7 +381,7 @@ riding park play
 ```
 
 ### c. `echo`
-Display a line of text
+
 បង្ហាញអត្ថបទមួយបន្ទាត់
 
 *បង្ហាញ "Hello World"*
@@ -397,8 +392,8 @@ echo Hello World
 Hello World
 ```
 
-*display "Hello World" with newlines between words*
-*បង្ហាញ "Hello World" ចុះបន្ទាត់ថ្មីក្នុងមួយពាក្យ*
+
+*បង្ហាញ "Hello World" ចុះបន្ទាត់ថ្មីក្នុងមួយពាក្យៗ*
 ```bash
 echo -ne "Hello\nWorld\n"
 ```
@@ -408,8 +403,7 @@ World
 ```
 
 ### d. `egrep`
-Print lines matching a pattern - Extended Expression (alias for: 'grep -E')
-បង្ហាញអត្ថបទបន្ទាត់ដែលតាមលំនាំ - ការមតិបន្ថែម (alias 'grep -E')
+បង្ហាញអត្ថបទជាបន្ទាត់ដែលតាមលំនាំ - ការមតិបន្ថែម (alias 'grep -E')
 
 *example.txt*
 ```bash
@@ -434,7 +428,6 @@ ipsum dolor sit
 amet.
 ```
 
-*display lines that have either "Lorem" or "dolor" in them.*
 *បង្ហាញអត្ថបទបន្ទាត់ដែលមានពាក្យ "Lorem" ឬ "dolor" ក្នុងឯកសារ*
 ```bash
 egrep '(Lorem|dolor)' example.txt
@@ -451,7 +444,6 @@ ipsum dolor sit
 ```
 
 ### e. `fgrep`
-Print lines matching a pattern - FIXED pattern matching  (alias for: 'grep -F')
 បង្ហាញអត្ថបទបន្ទាត់ដែលតាមលំនាំ - ការផ្គូផ្គងលំនាំ FIXED (alias 'grep -F')
 
 *example.txt*
@@ -478,7 +470,6 @@ ipsum dolor sit
 amet.
 ```
 
-*Find the exact string '(Lorem|dolor)' in example.txt*
 *ស្វែងរកអក្សរ '(Lorem|dolor)' ក្នុងឯកសារ example.txt*
 ```bash
 fgrep '(Lorem|dolor)' example.txt
@@ -490,7 +481,6 @@ foo (Lorem|dolor)
 ```
 
 ### f. `fmt`
-Simple optimal text formatter
 ទម្រង់អក្សរមានលំដាប់
 
 *ឧទាហរណ៍: example.txt (1 line)*
@@ -498,8 +488,7 @@ Simple optimal text formatter
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ```
 
-*output the lines of example.txt to 20 character width*
-*បង្ហាញអត្ថបទបន្ទាត់ដែលមាន ២០ពាក្យ ក្នុងឯកសារ example*
+*បង្ហាញអត្ថបទបន្ទាត់ដែលមាន ២០ពាក្យក្នុងឯកសារ example*
 ```bash
 cat example.txt | fmt -w 20
 ```
@@ -526,27 +515,27 @@ amet.
 ```
 
 ### g. `grep`
-Looks for text inside files. You can use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines.
-ស្វែងរកពាក្យក្នុងអត្ថបទឯកសារមួយ អ្នកអាចប្រើប្រាស់ grep ដើម្បីស្វែងរកវានឹងបង្ហាញលទ្ធផលជាជួរ។
+វែងរកពាក្យក្នុងអត្ថបទឯកសារមួយ អ្នកអាចប្រើប្រាស់ grep ដើម្បីស្វែងរកវានឹងបង្ហាញលទ្ធផលជាជួរ។
 ```bash
 grep pattern filename
 ```
-ឧទាហរណ៍:
+
+ឧទាហរណ៍៖
 ```bash
 $ grep admin /etc/passwd
 _kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
 _kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
 _krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
 ```
-You can also force grep to ignore word case by using `-i` option. `-r` can be used to search all files under the specified directory, for example:
-អ្នកអាចប្រើការស្វែងរកឯកសារដោយបង្ខំការរុករកប្រើប្រាស់ `-i`។ ចំណែក `-r` វាអាចស្វែងរកគ្រប់ឯកសារទាំងអស់ដែលស្ថិតនៅក្នុងថតឯកសារដែលអ្នកបានកំណត់។ ឧទាហរណ៍៖ 
+
+អ្នកអាចប្រើការស្វែងរកឯកសារដោយបង្ខំលើកលែងពាក្យដោយប្រើប្រាស់ `-i`។ ចំណែក `-r` វាអាចស្វែងរកគ្រប់ឯកសារទាំងអស់ដែលស្ថិតនៅក្នុងថតឯកសារដែលអ្នកបានកំណត់។ ឧទាហរណ៍៖ 
 ```bash
 $ grep -r admin /etc/
 ```
-And `-w` to search for words only. For more detail on `grep`, check following [link](https://www.cyberciti.biz/faq/grep-in-bash).
+
 ចំណែក `-w` សម្រាប់ស្វែករកតែពាក្យប៉ុណ្ណោះ។ សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ `grep` អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](https://www.cyberciti.biz/faq/grep-in-bash) ។ 
+
 ### h. `nl`
-Number lines of files
 ជាចំនួនបន្ទាត់អត្ថបទក្នុងឯកសារមួយ។
 
 *example.txt*
@@ -572,7 +561,6 @@ ipsum dolor sit
 amet.
 ```
 
-*show example.txt with line numbers*
 *ដើម្បីបង្ហាញចំនួនលេខបន្ទាត់អត្ថបទក្នុង example.txt *
 ```bash
 nl -s". " example.txt 
@@ -600,7 +588,6 @@ nl -s". " example.txt
 ```
 
 ### i. `sed`
-Stream editor for filtering and transforming text
 កំណែទម្រង់អត្ថបទដោយផ្ទាល់សម្រាប់ការបំលែងអត្ថបទ
 
 *example.txt*
@@ -608,7 +595,6 @@ Stream editor for filtering and transforming text
 Hello This is a Test 1 2 3 4
 ``` 
 
-*replace all spaces with hyphens*
 *ជំនួសគ្រប់ ដកឃ្លា(space) ជាមួយសហាសញ្ញា(-)*
 ```bash
 sed 's/ /-/g' example.txt
@@ -617,7 +603,6 @@ sed 's/ /-/g' example.txt
 Hello-This-is-a-Test-1-2-3-4
 ```
 
-*replace all digits with "d"*
 *ជំនួសគ្រប់លេខទាំងអស់ដោយអក្សរ "d"*
 ```bash
 sed 's/[0-9]/d/g' example.txt
@@ -627,7 +612,6 @@ Hello This is a Test d d d d
 ```
 
 ### j. `sort`
-Sort lines of text files
 តម្រៀបលំដាប់អត្ថបទអក្សរជាបន្ទាត់
 
 *example.txt*
@@ -655,7 +639,6 @@ f
 g
 ```
 
-*randomize a sorted example.txt*
 *តម្រៀបលំដាប់អត្ថបទអក្សរដោយចៃដន្យក្នុងឯកសារ example.txt*
 ```bash
 sort example.txt | sort -R
@@ -671,7 +654,6 @@ e
 ```
 
 ### k. `tr`
-Translate or delete characters
 បំលែងឬលុបអក្សរ
 
 *example.txt*
@@ -679,7 +661,6 @@ Translate or delete characters
 Hello World Foo Bar Baz!
 ```
 
-*take all lower case letters and make them upper case*
 *បំលែងគ្រប់អក្សរតូចទាំងអស់ទៅជាអក្សរធំ*
 ```bash
 cat example.txt | tr 'a-z' 'A-Z' 
@@ -688,7 +669,6 @@ cat example.txt | tr 'a-z' 'A-Z'
 HELLO WORLD FOO BAR BAZ!
 ```
 
-*take all spaces and make them into newlines*
 *បំលែងដកឃ្លាទាំងអស់ទៅជាចុះបន្ទាត់ថ្មី*
 ```bash
 cat example.txt | tr ' ' '\n'
@@ -702,7 +682,6 @@ Baz!
 ```
 
 ### l. `uniq`
-Report or omit repeated lines
 រាយការណ៍ឬលុបចោលជួរមានអក្សរដដែលៗ
 
 *example.txt*
@@ -717,7 +696,6 @@ d
 c
 ```
 
-*show only unique lines of example.txt (first you need to sort it, otherwise it won't see the overlap)*
 *បង្ហាញអត្ថបទដែលមានតែមួយនៃ example.txt (ដំបូងអ្នកត្រូវតែតម្រៀបតាមលំដាប់ជាមុនសិន បើមិនដូច្នោះវាមិនអាចបង្ហាញអត្ថបទមានតែមួយនោះទេ)*
 ```bash
 sort example.txt | uniq
@@ -729,8 +707,7 @@ c
 d
 ```
 
-*show the unique items for each line, and tell me how many instances it found*
-*បង្ហាញអត្ថបទនៃបន្ទាត់និមួយៗ និងចំនួនដែលបានរកឃើញក្នុងជួរបន្ទាត់ជាមួយគ្នា*
+*បង្ហាញអត្ថបទនៃបន្ទាត់នីមួយៗ និងចំនួនដែលបានរកឃើញក្នុងជួរបន្ទាត់ជាមួយគ្នា*
 ```bash
 sort example.txt | uniq -c
 ```
@@ -742,17 +719,17 @@ sort example.txt | uniq -c
 ```
 
 ### m. `wc`
-Tells you how many lines, words and characters there are in a file.  
 បង្ហាញប្រាប់អ្នកចំនួនបន្ទាត់ ពាក្យ និងពញ្ជនៈដែលមានក្នុងឯកសារ។
 ```bash
 wc filename
 ```
-Example:
+
+ឧទាហរណ៍៖
 ```bash
 $ wc demo.txt
 7459   15915  398400 demo.txt
 ```
-Where `7459` is lines, `15915` is words and `398400` is characters.
+
 `7459` ចំនួនបន្ទាត់ `15915` ចំនួនពាក្យ និង `398400` ពញ្ជនៈ។
 
 ## 1.3. Directory Operations
@@ -766,37 +743,34 @@ Where `7459` is lines, `15915` is words and `398400` is characters.
 </table>
 
 ### a. `cd`
-Moves you from one directory to other. Running this  
-អ្នកអាចផ្លាស់ទីពីទីតាំងមួយទៅទីតំាងផ្សេងទៀតដោយប្រើ 
+អ្នកអាចផ្លាស់ប្តូរពីទីតាំងមួយទៅទីតំាងផ្សេងទៀតដោយប្រើ 
 ```bash
 $ cd
 ```
-moves you to home directory. This command accepts an optional `dirname`, which moves you to that directory.
-ផ្លាស់ទីអ្នកពីទីតាំងដើមទៅទីតាំង `dirname` ជាទីតាំងអ្នកប្តូរទៅ
+ផ្លាស់ប្តូរអ្នកពីទីតាំងដើមទៅទីតាំង `dirname` ជាទីតាំងអ្នកប្តូរទៅ
 ```bash
 cd dirname
 ```
 
 ### b. `mkdir`
-Makes a new directory.  
-បង្កើតថតឯកសារថ្មី
+បង្កើតថតថ្មី
 ```bash
 mkdir dirname
 ```
-You can use this to create multiple directories at once within your current directory.
-អ្នកអាចបង្កើតថតឯកសារថ្មីច្រើនក្នុងការបញ្ជាតែម្តងក្នុងថតដែលអ្នកស្ថិតនៅ
+
+អ្នកអាចបង្កើតថតថ្មីច្រើនក្នុងការបញ្ជាតែម្តងក្នុងថតដែលអ្នកស្ថិតនៅ
 ```bash
 mkdir 1stDirectory 2ndDirectory 3rdDirectory
 ```
-You can also use this to create parent directories at the same time. For instance, if you wanted a directory named 'project1' in another subdirectory at '/samples/bash/projects/', you could run:
-អ្នកអាចបង្កើតថតឯកសារថ្មីទៅលើថតឯកសារដែលអ្នកមិនស្ថិតនៅ។ ឧទាហរណ៍អ្នកចង់បង្កើតថតឯកសារ 'project1' ក្នុង '/samples/bash/projects/' ដែលអ្នកបានស្ថិតនៅកន្លែងនោះ៖
+
+អ្នកអាចបង្កើតថតថ្មីទៅលើថតដែលអ្នកមិនស្ថិតនៅ។ ឧទាហរណ៍ អ្នកចង់បង្កើតថត 'project1' ក្នុង '/samples/bash/projects/' ដែលអ្នកបានស្ថិតនៅកន្លែងនោះ៖
 ```bash 
 mkdir /samples/bash/projects/project1
 ```
-If any of these directories did no already exist, they would be created as well.
-ប្រើថតដែលអ្នកបង្កើតនោះមិនជាន់ឈ្មោះនោះទេ វានឹងបង្កើតថតឯកសារនោះឱ្យអ្នក
-### c. `pwd`
-Tells you which directory you currently are in.  
+
+ប្រើថតដែលអ្នកបង្កើតនោះមិនជាន់ឈ្មោះនោះទេ វានឹងបង្កើតថតនោះឱ្យអ្នក
+
+### c. `pwd`  
 សម្រាប់ប្រាប់ទីតាំងបច្ចុប្បន្នដែលអ្នកស្ថិតនៅ។
 ```bash
 pwd
@@ -838,33 +812,29 @@ pwd
 </table>
 
 ### a. `bg`
-Lists stopped or background jobs; resume a stopped job in the background.
 បញ្ជីការបញ្ឈប់ឬការងារដែលបានដំណើរការនៅខាងក្រោយ ការផ្អាក់ដំណើរការការងារបានដំណើរការនៅខាងក្រោយ។
+
 ### b. `cal`
-Shows the month's calendar.
 បង្ហាញប្រតិទិនរបស់ខែនេះ
 
 ### c. `date`
-Shows the current date and time.
 បង្ហាញថ្ងៃខែ និងម៉ោងបច្ចុប្បន្ន
+
 ### d. `df`
-Shows disk usage.
 បង្ហាញទិន្នន័យការប្រើប្រាស់ ឌីស
 
 ### e. `dig`
-Gets DNS information for domain.  
 បង្ហាញព័ត៌មានឈ្មោះ DNS
 ```bash
 dig domain
 ```
 
 ### f. `du`
-Shows the disk usage of files or directories. For more information on this command check this [link](http://www.linfo.org/du.html)
 បង្ហាញទិន្នន័យការប្រើប្រាស់ឌីសនៃឯកសារឬថតសារ។ សម្រាប់ព័ត៌មានលម្អិតការប្រើប្រាស់ អ្នកអាចអានក្នុង [តំណភា្ជប់នេះបាន ](http://www.linfo.org/du.html) ។ 
 ```bash
 du [option] [filename|directory]
 ```
-Options:
+
 ជម្រើសបន្ថែម៖
 - `-h` (human readable) បង្ហាញលទ្ធផលគិតជា គីឡូបៃត៍ (kilobytes - K) មេហ្គាបៃខ្នាត (Megabytes - M) និង ជីហ្គាបៃខ្នាត (Gigabytes - G)
 - `-s` (supress or summarize) បង្ហាញទិន្នន័យសរុបឌីសនៃថតឯកសារ និង របាយការណ៍សម្រាប់ថតរង
@@ -876,93 +846,80 @@ du -sh pictures
 ```
 
 ### g. `fg`
-Brings the most recent job in the foreground.
 នាំមកនូវការងារថ្មីៗមកនៅផ្ទៃខាងមុខ។
 
 ### h. `finger`
-Displays information about user.  
 បង្ហាញព័ត៌មានអំពីអ្នកប្រើប្រាស់ user ។
 ```bash
 finger username
 ```
 ### i. `jobs`
-Lists the jobs running in the background, giving the job number.
 បង្ហាញបញ្ជីការងារនិងចំនួនដែលកំពុងដំណើរនៅខាងក្រោយ។
 
 ### j. `last`
-Lists your last logins of specified user.  
 បង្ហាញទិន្នន័យចំនួនបានចូលប្រើប្រាស់របស់អ្នកប្រើប្រាស់ user
 ```bash
 last yourUsername
 ```
 
 ### k. `man`
-Shows the manual for specified command.  
 បង្ហាញសៀវភៅណែនាំសម្រាប់ពាក្យបញ្ជាដែលបានបញ្ជាក់។
 ```bash
 man command
 ```
 
 ### l. `passwd`
-Allows the current logged user to change their password.
 អនុញ្ញាតឱ្យអ្នកកំពុងប្រើប្រាស់អាចប្តូរលេខសម្ងាត់
+
 ### m. `ping`
-Pings host and outputs results.  
 Ping host និងបង្ហាញលទ្ធផល
 ```bash
 ping host
 ```
 
 ### n. `ps`
-Lists your processes.  
 បង្ហាញកម្មវិធីកំពុងដំណើរការ
 ```bash
 ps -u yourusername
 ```
-Use the flags ef. e for every process and f for full listing. 
-បង្ហាញព័ត៌មានលម្អិតពីបញ្ជីនិមួយៗដែលប្រើប្រាស់ flag
+
+បង្ហាញព័ត៌មានលម្អិតពីបញ្ជីនីមួយៗដែលប្រើប្រាស់ flag
 ```bash
 ps -ef
 ```
 
 ### o. `quota`
-Shows what your disk quota is.  
-បង្ហាញូតាឌីសរបស់អ្នក
+បង្ហាញតាឌីសរបស់អ្នក
 ```bash
 quota -v
 ```
 
 ### p. `scp`
-Transfer files between a local host and a remote host or between two remote hosts.
 ផ្ទេរឯកសាររវាងម៉ាស៊ីនប្រើប្រាស់និងម៉ាស៊ីនបញ្ជាចម្ងាយឬរវាងម៉ាស៊ីនពីបញ្ជាពីចម្ងាយពីរ។ 
 
-*copy from local host to remote host*
 *ចម្លងពីម៉ាស៊ីនប្រើប្រាស់ទៅម៉ាស៊ីនបញ្ជាពីចម្ងាយ*
 ```bash
 scp source_file user@host:directory/target_file
 ```
-*copy from remote host to local host* /
+
 *ចម្លងពីម៉ាស៊ីនបញ្ជាពីចម្ងាយមកមា៉ស៊ីនប្រើប្រាស់*
 ```bash
 scp user@host:directory/source_file target_file
 scp -r user@host:directory/source_folder target_folder
 ```
-This command also accepts an option `-P` that can be used to connect to specific port.  
-ការបញ្ជានេះមានជម្រើសបន្ថែម `-P` ដែលអាចប្រើប្រាស់សម្រាប់ភ្ជាប់ប្រើប្រាស់ Port ណាមួយបាន
 
+ការបញ្ជានេះមានជម្រើសបន្ថែម `-P` ដែលអាចប្រើប្រាស់សម្រាប់ភ្ជាប់ប្រើប្រាស់ Port ណាមួយបាន
 ```bash
 scp -P port user@host:directory/source_file target_file
 ```
 
 ### q. `ssh`
-ssh (SSH client) is a program for logging into and executing commands on a remote machine.  
 shh (SSH client) គឺជាកម្មវិធីមួយសម្រាប់ចូលប្រើប្រាស់និងដំណើរការការបញ្ជាទៅកាន់ម៉ាស៊ីនបញ្ជាពីចម្ងាយ។
 
 ```bash
 ssh user@host
 ```
 
-This command also accepts an option `-p` that can be used to connect to specific port.  
 ការបញ្ជានេះមានជម្រើសបន្ថែម `-p` ដែលអាចប្រើប្រាស់សម្រាប់ភ្ជាប់ប្រើប្រាស់ Port ណាមួយបាន
 
 ```bash
@@ -970,37 +927,30 @@ ssh -p port user@host
 ```
 
 ### r. `top`
-Displays your currently active processes.
 បង្ហាញពីដំណើរការបច្ចុប្បន្នរបស់អ្នក
 
 ### s. `uname`
-Shows kernel information.  
 បង្ហាញពីព័ត៌មាន kernel 
 ```bash
 uname -a
 ```
 
 ### t. `uptime`
-Shows current uptime.
 បង្ហាញពីពេលវេលាបច្ចុប្បន្នប្រើប្រាស់កុំព្យូទ័រ
 
 ### u. `w`
-Displays who is online.
 បង្ហាញនរណាដែលអាចចូលប្រើប្រាស់បាន
 
 ### v. `wget`
-Downloads file. 
 សម្រាប់ទាញយកឯកសារ 
 ```bash
 wget file
 ```
 
 ### w. `whoami`
-Return current logged in username.
 បង្ហាញពីឈ្មោះអ្នកដែលកំពុងប្រើប្រាស់បច្ចុប្បន្ន
 
 ### x. `whois`
-Gets whois information for domain. 
 បង្ហាញព័ត៌មានម្ចាស់ domain
 ```bash
 whois domain
@@ -1018,51 +968,43 @@ whois domain
 </table>
 
 ### a. `kill`
-Kills (ends) the processes with the ID you gave.  
 បញ្ឈប់ការដំណើរការណាមួយដោយ ID
 ```bash
 kill PID
 ```
 
 ### b. `killall`
-Kill all processes with the name.  
 បញ្ឈប់ការដំណើរការណាមួយដោយឈ្មោះ
 ```bash
 killall processname
 ```
 
 ### c. &
-The `&` symbol instructs the command to run as a background process in a subshell.
-សញ្ញា `&` ជាការបញ្ជាបន្ថែមផ្សេងទៀត
+សញ្ញា `&` ភា្ជប់ការបញ្ជាបន្ថែមផ្សេងទៀត
 
 ```bash
 command &
 ```
 
 ### d. `nohup`
-nohup stands for "No Hang Up". This allows to run command/process or shell script that can continue running in the background after you log out from a shell.
 nohup មកពីពាក្យ "No Hang Up" អនុញ្ញាតឱ្យអ្នកបញ្ជាឬដំណើរការ script ណាមួយដែលអ្នកបានកំណត់វានឹងដំណើរការរហូតទោះបីអ្នកបានចាកចេញក៏ដោយ។
 ```bash
 nohup command
 ```
-Combine it with `&` to create background processes 
+
 ភ្ជាប់ការដំណើរការផ្សេងទៀតដោយសញ្ញា `&` ដើម្បីបង្កើតការដំណើរការខាងក្រោយ
 ```bash
 nohup command &
 ```
 
 # 2. Basic Shell Programming
-
-The first line that you will write in bash script files is called `shebang`. This line in any script determines the script's ability to be executed like a standalone executable without typing sh, bash, python, php etc beforehand in the terminal.
-បន្ទាត់ដំបូងដែលអ្នកនឹងត្រូវសរសេរជា script ត្រូវបានគេហៅថា `shebang` ។ បន្ទាត់ script នេះវាអាចមានសមត្ថភាពដំណើរ script ដោយមិនចំបាច់ប្រើប្រាស់ sh, bash, python, php etc នៅខាងដើមក្នុងផ្ទាំងពណ៌ខ្មៅដើម្បីធ្វើការបញ្ជាទៀតឡើយ។
+បន្ទាត់ដំបូងដែលអ្នកនឹងត្រូវសរសេរជា `script` ត្រូវបានគេហៅថា `shebang` ។ បន្ទាត់ `script` នេះវាអាចមានសមត្ថភាពដំណើរ `script` ដោយមិនចំបាច់ប្រើប្រាស់ `sh`, `bash`, `python`, `php` etc នៅខាងដើមក្នុងផ្ទាំងពណ៌ខ្មៅដើម្បីធ្វើការបញ្ជាទៀតឡើយ។
 
 ```bash
 #!/usr/bin/env bash
 ```
 
 ## 2.1. Variables
-
-Creating variables in bash is similar to other languages. There are no data types. A variable in bash can contain a number, a character, a string of characters, etc. You have no need to declare a variable, just assigning a value to its reference will create it.
 ការបង្កើតអថេរនៅក្នុង bash គឺស្រដៀងនឹងភាសាផ្សេងទៀត។ វាមិនមានប្រភេទទិន្នន័យទេ អថេរក្នុងប៊្លុកអាចមានលេខតួអក្សរ។ អ្នកមិនចាំបាច់ប្រកាសប្រភេទអថេរទេគ្រាន់តែផ្តល់តម្លៃទៅវា វានឹងបង្កើតដោយខ្លួនឯង។
 
 ឧទាហរណ៍៖
@@ -1070,7 +1012,6 @@ Creating variables in bash is similar to other languages. There are no data type
 str="hello world"
 ```
 
-The above line creates a variable `str` and assigns "hello world" to it. The value of variable is retrieved by putting the `$` in the beginning of variable name.
 ខាងលើនេះជាការបង្កើតអថេរ `str` ដែលមានតម្លៃ "hello world"។ ក្នុងការយកមកប្រើប្រាស់អ្នកគ្រាន់តែដាក់សញ្ញា `$` នៅខាងដើមអថេរជាការស្រេច។
 
 ឧទាហរណ៍៖
@@ -1078,7 +1019,6 @@ The above line creates a variable `str` and assigns "hello world" to it. The val
 echo $str   # hello world
 ```
 ## 2.2. Array
-Like other languages bash has also arrays. An array is a variable containing multiple values. There's no maximum limit on the size of array. Arrays in bash are zero based. The first element is indexed with element 0. There are several ways for creating arrays in bash which are given below.
 វាក៏ដូចជាភាសាដទៃដែរគឺមាន array ដូចគ្នា។ Array មួយយើងបានដឹងហើយវាអាចផ្ទុកតម្លៃជាច្រើនក្នុងអថេរតែមួយដែលវាមានទំហំមិនអាចកំណត់បានឡើយ។ Array នៅក្នុង bash ក៏ចាប់ផ្តើមពី index ទីសូន្យ។ ខាងក្រោមនេះជាវិធីបង្កើត array ក្នុង bash ៖
 
 ឧទាហរណ៍៖
@@ -1089,22 +1029,18 @@ array[2]=val
 array=([2]=val [0]=val [1]=val)
 array=(val val val)
 ```
-To display a value at specific index use following syntax:
+
 ដើម្បីបង្ហាញតម្លៃស្ថិតនៅ index ណាមួយអ្នកអាចប្រើប្រាស់ដូចខាងក្រោមនេះ
 
 ```bash
 ${array[i]}     # where i is the index
 ```
 
-If no index is supplied, array element 0 is assumed. To find out how many values there are in the array use the following syntax:
 ប្រសិនបើអ្នកមិនបានដឹងពីចំនួនធាតុ array ឬមិនដឹងវាបានបង្កើតដោយមាន array ប្រើចំនួនលំដាប់លេខ index ទីសូន្យឬនោះទេ។ ដើម្បីទាញយកតម្លៃក្នុង array មកប្រើដោយមិនស្គាល់ប្រភេទ index អ្នកអាចធ្វើតាមវិធីខាងក្រោម៖
-
 ```bash
 ${#array[@]}
 ```
-
-Bash has also support for the ternary conditions. Check some examples below.
-Bash ក៏ស្គាល់សម្រាប់លក្ខខណ្ឌពិសេសមួយចំនួន។ ខាងក្រោមនេះជាឧទាហរណ៍៖
+Bash ក៏ស្គាល់សម្រាប់ល័ក្ខខ័ណ្ឌពិសេសមួយចំនួន។ ខាងក្រោមនេះជាឧទាហរណ៍៖
 
 ```bash
 ${varname:-word}    # if varname exists and isn't null, return its value; otherwise return word
@@ -1114,8 +1050,6 @@ ${varname:offset:length}    # performs substring expansion. It returns the subst
 ```
 
 ## 2.3 String Substitution
-
-Check some of the syntax on how to manipulate strings
 ដើម្បីពិនិត្យ syntax របៀបរៀបចំប្រភេទ string
 
 ```bash
@@ -1129,7 +1063,6 @@ ${#varname}     # returns the length of the value of the variable as a character
 ```
 
 ## 2.4. Functions
-As in almost any programming language, you can use functions to group pieces of code in a more logical way or practice the divine art of recursion. Declaring a function is just a matter of writing function my_func { my_code }. Calling a function is just like calling another program, you just write its name.
 ដូចគ្នាទៅនឹងភាសាដទៃ អ្នកអាចប្រើប្រាស់មុខងារ (function) ដើម្បីបែងចែកជាក្រុមងាយស្រួលក្នុងការអនុវត្តទៅការងារផ្សេងៗ។ ការបង្កើតមុខងារ (function) គឺគ្រាន់តែសរសេរ ឈ្មោះមុខងារ { កូដការងារ }។ ការហៅមកប្រើប្រាស់មុខងារនោះគ្រាន់តែហៅឈ្មោះរបស់វា។
 
 ```bash
@@ -1152,13 +1085,10 @@ function say {
 say "hello world!"
 ```
 
-When you run the above example the `hello` function will output "world!". The above two functions `hello` and `say` are identical. The main difference is function `say`. This function, prints the first argument it receives. Arguments, within functions, are treated in the same manner as arguments given to the script.
 ពេលអ្នកគ្រាន់តែហៅឈ្មោះមុខងារថា `hello` នោះវានឹងបង្ហាញលទ្ធផល "world!"។ មុខងារទាំងទីពីរមាន `hello` និង `say` ក៏ជា function ដូចគ្នា។ ភាពខុសគ្នារបស់មុខងារនេះគឺ function say វាត្រូវការប៉ារ៉ាម៉ែត្រដើម្បីយកទៅបង្ហាញលទ្ធផលក្នុងមុខងាររបស់ខ្លួនវាផ្ទាល់។ 
 
 ## 2.5. Conditionals
-
-The conditional statement in bash is similar to other programming languages. Conditions have many form like the most basic form is `if` expression `then` statement where statement is only executed if expression is true.
-ការគ្រប់គ្រងល័ក្ខខ័ណ្ឌ (Condition statement) ក្នុង bash គឺស្រដៀងទៅនឹងភាសាដទៃដែរ។ ល័ក្ខខ័ណ្ឌមានច្រើនទម្រង់ដូចជាទម្រង់មូលដ្ឋានបំផុតគឺ if ប្រសិនបើល័ក្ខខ័ណ្ឌត្រឹមត្រូវវានឹងដំណើរការកិច្ចដែលសិ្ថតនៅក្នុងខ្លួនវា។ 
+ការគ្រប់គ្រងល័ក្ខខ័ណ្ឌ (Conditionals statement) ក្នុង bash គឺស្រដៀងទៅនឹងភាសាដទៃដែរ។ ល័ក្ខខ័ណ្ឌមានច្រើនទម្រង់ដូចជាទម្រង់មូលដ្ឋានបំផុតគឺ if ប្រសិនបើល័ក្ខខ័ណ្ឌត្រឹមត្រូវវានឹងដំណើរការកិច្ចដែលសិ្ថតនៅក្នុងខ្លួនវា។ 
 
 ```bash
 if [ expression ]; then
@@ -1168,7 +1098,6 @@ else
 fi
 ```
 
-Sometime if conditions becoming confusing so you can write the same condition using the `case statements`.
 ប្រសិនបើវាមានល័ក្ខខ័ណ្ឌច្រើនស្មុកស្មាញ អ្នកអាចប្រើល័ក្ខខ័ណ្ឌមួយទៀតហៅថា `case statements`។ 
 
 ```bash
@@ -1218,8 +1147,6 @@ file1 -ot file2     # file1 is older than file2
 ```
 
 ## 2.6. Loops
-
-There are three types of loops in bash. `for`, `while` and `until`.
 ការវិលជុំមានបីប្រភេទក្នុង bash គឺ `for`, `while` និង `until` ។
 
 Different `for` Syntax:
@@ -1257,43 +1184,30 @@ done
 # 3. Tricks
 
 ## Set an alias
-
-Run `nano ~/.bash_profile` and add the following line:
 ដំណើរការ `nano ~/.bash_profile` និងបន្ថែមកូដចូលទៅក្នុង editor៖ 
-
 ```bash
 alias dockerlogin='ssh www-data@adnan.local -p2222'  # add your alias in .bash_profile
 ```
 
 ## To quickly go to a specific directory
-
-Run `nano ~/.bashrc` and add the following line:
 ដំណើរការ `nano ~/.bashrc` និងបន្ថែមកូដចូលទៅក្នុង editor៖ 
-
 ```bash
 export hotellogs="/workspace/hotel-api/storage/logs"
 ```
 
-Now you can use the saved path:
 អ្នកអាចរក្សាទុក path ខាងលើបានដោយប្រើ៖ 
-
 ```bash
 source ~/.bashrc
 cd $hotellogs
 ```
 
 ## Re-execute the previous command
-
-This goes back to the days before you could rely on keyboards to have an "up" arrow key, but can still be useful. 
-To run the last command in your history 
 អ្នកអាចត្រលប់ទៅកាន់ការបញ្ជាពីមុនៗបានដោយចុចសញ្ញា "ព្រួញឡើងលើ" នៅលើក្តារចុច ឬប្រើសញ្ញាឧទានពីរក៏អាចត្រលប់ទៅកាន់ការបញ្ជាចាស់បាន។
-
 ```bash
 !!
 ```
-A common error is to forget to use `sudo` to prefix a command requiring privileged execution. Instead of typing the whole command again, you can:
-ការបញ្ជាមួយចំនួនអាច errro គឺវាត្រូវការ `sudo` ដើម្បីបញ្ជាជាប្រតិបត្តិដែលមានឯកសិទ្ធិ។ អ្នកអាចប្រើប្រាស់ដូចខាងក្រោមនេះបាន៖
 
+ការបញ្ជាមួយចំនួនអាច errro គឺវាត្រូវការ `sudo` ដើម្បីបញ្ជាជាប្រតិបត្តិដែលមានឯកសិទ្ធិ។ អ្នកអាចប្រើប្រាស់ដូចខាងក្រោមនេះបាន៖
 ```bash
 sudo !!
 ```
@@ -1301,8 +1215,6 @@ This would change a `mkdir somedir` into `sudo mkdir somedir`.
 អ្នកគួរតែប្តូរការសរសេរ `mkdir somedir` ទៅជា `sudo mkdir somedir` ដែលទាក់ទងនឹងប្រតិបត្តិដែលមានឯកសិទ្ធិ។
 
 ## Exit traps
-
-Make your bash scripts more robust by reliably performing cleanup.
 ការសរសេរ script ក្នុង bash ឱ្យមានភាពងាយអានមានសណ្តាប់ឆ្នាប់និងស្អាតដែលមាន comment ព័ត៌មានបន្ថែម។
 ```bash
 function finish {
@@ -1313,8 +1225,6 @@ trap finish EXIT
 ```
 
 ## Saving your environment variables
-
-When you do `export FOO = BAR`, your variable is only exported in this current shell and all its children, to persist in the future you can simply append in your `~/.bash_profile` file the command to export your variable
 ពេលអ្នកប្រើ `export FOO = BAR` អថេររបស់អ្នកត្រូវតែ export ដាក់ចូលទៅ shell និង shell កូនដែលពាក់ព័ន្ធព្រោះជៀសវាងបញ្ហាថ្ងៃក្រោយភ្លេច export ចូល `~/.bash_profile` ពេលអ្នកហៅអថេរណាមួយមិនត្រឹមត្រូវក្នុង shell នោះ។
 
 ```bash
@@ -1322,11 +1232,8 @@ echo export FOO=BAR >> ~/.bash_profile
 ```
 
 ## Accessing your scripts
-
-You can easily access your scripts by creating a bin folder in your home with `mkdir ~/bin`, now all the scripts you put in this folder you can access in any directory.
 អ្នកងាយស្រួលក្នុងការចូលទៅប្រើប្រាស់ script ដែលបានបង្កើតក្នុងថតឯកសារ bin ក្នុងទំព័រដើមដោយ `mkdir ~/bin` ព្រោះគ្រប់ script ទាំងអស់ដែលស្ថិតក្នុងថតនេះវាអាចមានសិទ្ធិប្រើប្រាស់គ្រប់ថតទាំងអស់។
 
-If you can not access, try append the code below in your `~/.bash_profile` file and after do `source ~/.bash_profile`.
 ប្រសិនបើអ្នកមិនអាចចូលប្រើប្រាស់បាន អ្នកអាចប្រើប្រាស់កូដខាងក្រោមនេះបាននៅក្នុង `~/.bash_profile` និងបន្ទាប់មកប្រើ command `source ~/.bash_profile` ៖
 ```bash
 # set PATH so it includes user's private bin if it exists
@@ -1336,7 +1243,6 @@ fi
 ```
 
 # 4. Debugging
-You can easily debug the bash script by passing different options to `bash` command. For example `-n` will not run commands and check for syntax errors only. `-v` echo commands before running them. `-x` echo commands after command-line processing.
 អ្នកអាច debug ក្នុង bash script ដោយបញ្ចូលជម្រើសផ្សេងគ្នាទៅក្នុង `bash` command។ ឧទាហរណ៍ `-n` វានឹងមិនដំណើរការការបញ្ជាទេ និងពិនិត្យ syntax ដែល error។ `-v`echo commands មុនដំណើរការ `command`។ `-x` echo commands បន្ទាប់ពី `command-line` បានដំណើរការ។ 
 
 ```bash
