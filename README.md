@@ -1253,9 +1253,9 @@ bash -x scriptname
 
 ## Contribution
 
-- Report issues [How to](https://help.github.com/articles/creating-an-issue/)
-- Open pull request with improvements [How to](https://help.github.com/articles/about-pull-requests/)
-- Spread the word
+- រាយការណ៍ពីបញ្ហា [How to](https://help.github.com/articles/creating-an-issue/)
+- ផ្ញើ pull request បើសិនមានកំណែទម្រង់ [How to](https://help.github.com/articles/about-pull-requests/)
+- ផ្សព្វផ្សាយ
 
 ## Translation
 - [English | Original](https://github.com/Idnan/bash-guide)
