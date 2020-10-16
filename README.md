@@ -1211,7 +1211,6 @@ cd $hotellogs
 ```bash
 sudo !!
 ```
-This would change a `mkdir somedir` into `sudo mkdir somedir`.
 អ្នកគួរតែប្តូរការសរសេរ `mkdir somedir` ទៅជា `sudo mkdir somedir` ដែលទាក់ទងនឹងប្រតិបត្តិដែលមានឯកសិទ្ធិ។
 
 ## Exit traps
